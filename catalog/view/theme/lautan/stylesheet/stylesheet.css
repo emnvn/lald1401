@@ -10,8 +10,8 @@ body {
 body div.viewport{
 	/*background:url(../image/socialFooterBg.jpg) no-repeat; 
 	background-position:bottom;
-	*/
-	background:url(../image/footer_bg_blue.jpg) no-repeat; 
+	
+	background:url(../image/footer_bg_blue.jpg) no-repeat; */
 	background-position:bottom;
 	
 } /*repeat color index*/
@@ -78,7 +78,7 @@ p{margin-bottom:10px; line-height:16px}
 #boss_color a:first-child{border-left:1px solid #0065a4}
 /* header */
 #header {
-	height: 108px;
+	/*height: 108px;*/
 	position: relative;
 	z-index: 99;
 }
@@ -1840,7 +1840,7 @@ form.register table.form td:first-child{padding-top:9px}
 #footer {
 	clear: both;
 	overflow: hidden;
-	padding-top:30px;
+	/*padding-top:30px;*/
 	/*background:url(../image/line_footer.jpg) no-repeat; padding-top:66px; /*margin-top:20px*/
 	
 }

@@ -1,5 +1,11 @@
 <?php
 // Text
+$_['text_privacy_policy']  = '[ Privacy Policy ]';
+$_['text_disclaimer']  = '[ Disclaimer ]';
+$_['text_webmail']  = '[ WebMail ]';
+$_['text_last_update']  = 'Cập nhật: %s';
+
+
 $_['text_information']  = 'Thông tin';
 $_['text_service']      = 'Dịch vụ khách hàng';
 $_['text_extra']        = 'Mở rộng';

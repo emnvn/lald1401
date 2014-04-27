@@ -66,6 +66,14 @@ DD_belatedPNG.fix('#logo img');
 <div id="header" class="sixteen columns">
 	<div class="boss_header_top">
 		<div id="header-top-right">
+		<div id="header-links">
+			<a href="#"><?php echo $text_home ?></a> | 
+			<a href="#"><?php echo $text_about_us ?></a> | 
+			<a href="#"><?php echo $text_our_product ?></a> | 
+			<a href="#"><?php echo $text_faq ?></a> | 
+			<a href="#"><?php echo $text_career ?></a> | 
+			<a href="#"><?php echo $text_sitemap ?></a>
+		</div>
 		<!-- 
 			<div id="welcome">
 			    <?php if (!$logged) { ?>
@@ -80,10 +88,12 @@ DD_belatedPNG.fix('#logo img');
 		</div>
 	</div>
 	<div class="boss_header_bottom">
+	<!-- 
 		<?php if ($logo) { ?>
 		  <div id="logo"><a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></a></div>
 		  <?php } ?>
 		  <?php //echo $cart; ?>
+		  
 		  <div id="header-top-static">
 				<div class="static-header">
 					<a href="#">
@@ -101,14 +111,15 @@ DD_belatedPNG.fix('#logo img');
 			    <input type="text" name="search" placeholder="<?php echo $text_search; ?>" />
 			    <?php } ?>
 		</div>
+		-->
 		<div id="m-welcome-link"></div>
 	</div>
   
-  
+  <div style="height:15px"></div>
 </div>
 <?php $num_of_items = count($categories);?>
 <?php $index = 0?>
-<?php if ($categories) { ?>
+<?php if (1==2) { ?>
 
 <div id="boss_menu" class="mega-menu">
   <ul>
@@ -185,3 +196,4 @@ DD_belatedPNG.fix('#logo img');
 </div>
 <?php } ?>
 <div id="notification"></div>
+

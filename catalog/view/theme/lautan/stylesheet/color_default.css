@@ -1,5 +1,64 @@
-body {background: url("../image/bg_color01_01.jpg") repeat-x scroll center 0 transparent;}
+
+/*body {background: url("../image/bg_color01_01.jpg") repeat-x scroll center 0 transparent;}
 body.home_page{background: url(../image/bg_index_color01_01.jpg) no-repeat center 0;	}
+*/
+.boss_header_top{
+	background-color:#0f8b92;
+	color:white;
+}
+.language_currency{width:auto; float:right; margin-top:-4px}
+
+#header-links { float:left; color:#fff; margin-top:9px; font-size:11px;margin-left:10px;}
+a, a:visited,a {color: white; outline: medium none; text-decoration: none; cursor:pointer}
+a:hover {text-decoration:underline;}
+ 
+.boss_header_bottom{
+	background: url(../image/banner.jpg) no-repeat center 0;
+	height:190px;
+}
+
+#footer{
+	background-color:#0f8b92;
+	color:white;
+	padding:5px 0 5px 0;
+	pading-top:0px;
+}
+#footer-links { float:left; color:#fff; font-size:11px;margin-left:10px;}
+#footer-links-right {
+	float:right;
+	padding-right:5px;
+}
+
+#column-left {
+background-color:#fcf9e7;
+height:500px;
+width:278px;
+}
+
+.ver-menu {
+	padding-left:25px;
+	background:transparent url(../image/ver-bg.png) repeat-y;	
+}
+
+.ver-menu div{
+	background-image:url(../image/bullet-lautan.png);
+	background-repeat: no-repeat;
+
+	width:80%;
+	background-position:left; 
+	padding-top:18px;
+	padding-left:25px;
+	padding-bottom:15px;
+	border-bottom:thin solid white;
+	border-bottom-width:3px !important;
+}
+
+.ver-menu div.active{
+	background-image:url(../image/bullet-lautan-active.png);
+}
+.ver-menu div.last{
+	border-bottom-width:0px !important;
+}
 div.contact-info{
 	color:white;
 	font-size:18px;

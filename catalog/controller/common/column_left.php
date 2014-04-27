@@ -41,11 +41,16 @@ class ControllerCommonColumnLeft extends Controller {
 		$this->load->model('setting/extension');
 		
 		$extensions = $this->model_setting_extension->getExtensions('module');		
-		
+		//var_dump($extensions);
 		foreach ($extensions as $extension) {
 			$modules = $this->config->get($extension['code'] . '_module');
-		
+			
+		/*if($extension['code']=="sidebarmenu"){
+			echo "<br/>aaaaaaaaaa<br/>";
+			var_dump($modules);
+		}*/
 			if ($modules) {
+				
 				foreach ($modules as $module) {
 					if ($module['layout_id'] == $layout_id && $module['position'] == 'column_left' && $module['status']) {
 						$module_data[] = array(

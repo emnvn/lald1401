@@ -1,6 +1,15 @@
 <?php
 // Text
-$_['text_home']           = 'Home';
+$_['text_home']           = 'HOME';
+$_['text_about_us']           = 'ABOUT US';
+$_['text_our_product']           = 'OUR PRODUCTS';
+$_['text_contact_us']           = 'CONTACT US';
+$_['text_faq']           = 'FAQ';
+$_['text_career']           = 'CAREER';
+$_['text_learning_center']           = 'LEARNING CENTER';
+$_['text_sitemap']           = 'SITE MAP';
+
+
 $_['text_wishlist']       = 'Wish List (%s)';
 $_['text_shopping_cart']  = 'Shopping Cart';
 $_['text_search']         = 'Search';

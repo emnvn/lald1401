@@ -2,7 +2,16 @@
 
 
 // Text
-$_['text_home']           = 'Trang chủ';
+$_['text_home']           = 'TRANG CHỦ';
+$_['text_about_us']           = 'GIỚI THIỆU';
+$_['text_our_product']           = 'SẢN PHẨM ';
+$_['text_contact_us']           = 'LIÊN HỆ';
+$_['text_faq']           = 'FAQ';
+$_['text_career']           = 'NGHỀ NGHIỆP';
+$_['text_sitemap']           = 'BẢN ĐỒ SITE';
+
+
+
 $_['text_wishlist']       = 'Wish List (%s)';
 $_['text_shopping_cart']  = 'Giỏ hàng';
 $_['text_search']         = 'Tìm';
@@ -17,7 +26,6 @@ $_['text_women']       	  = 'NỮ';
 $_['text_men']       	  = 'NAM';
 $_['text_teen']       	  = 'TUỔI TEEN';
 $_['text_shoe_gallery']   = 'GIÀY DÉP';
-$_['text_faq']       	  = 'FAQs';
 $_['text_soldout']        = 'MH. ĐÃ  BÁN';
 $_['text_sale']        = 'KHUYẾN MÃI';
 $_['text_special']        = 'Giá đặc biệt';

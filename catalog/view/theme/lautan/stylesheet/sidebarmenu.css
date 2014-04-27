@@ -1,0 +1,103 @@
+/* sidebarmenu CSS for most browsers */
+
+#nav {
+	padding:0px; 
+	margin:0px; 
+	list-style:none; 
+	font: 11px arial, sans-serif; 
+	background:transparent;}
+ 
+#nav ul {
+	padding:0; 
+	margin:0; 
+	list-style:none; 
+	float:left; 
+	background:#FFFFFF;
+	border-bottom:1px solid #DDDDDD;
+	border-top:1px solid #DDDDDD;}
+
+#nav li {
+	padding:0px;
+	margin:0px;}
+	
+#nav li li {
+	float:none;
+	border-left:1px solid #DDDDDD;
+	border-right:1px solid #DDDDDD; 
+	padding:0px;
+	margin:0px;
+	min-width:150px;
+	background: transparent;}
+	
+#nav li li.first {
+	border-left:0px;
+	margin-left:1px}
+	
+/* a hack for  IE6 */
+* html 
+#nav li li {float:left;}
+
+#nav li a {
+	display:block; 
+	padding:5px 0px 5px 5px;
+	color:#000000; 
+	text-decoration:none; 
+	white-space:nowrap; 
+	font-weight:normal;
+	background:#FFFFFF;}
+
+#nav li li a {	
+	display:block; 
+	padding:5px 10px 5px 20px; 
+	font-weight:normal;
+	background:#FFFFFF url(../image/menubullet1.png) 10px center no-repeat;}
+
+#nav li:hover {
+	position:relative; 
+	z-index:300;}
+
+#nav li li a {
+	color:#000000;}
+
+#nav li:hover ul {
+	/* adjust the "left:" value below to your sidebar width if necessary */
+	left:138px; 
+	top:0px; 
+	z-index:500;}
+
+#nav ul {
+	position:absolute; 
+	left:-9999px; 
+	top:-9999px;}
+
+/* Generate sub-categories menu (next level) */
+* html 
+#nav ul {width:0px;}
+
+/* show next level */
+#nav li:hover li:hover > ul {
+	left:-5px; 
+	margin-left:100%; 
+	top:-1px; 
+	z-index:500;}
+
+/* keep further levels hidden */
+#nav li:hover > ul ul {
+	position:absolute; 
+	left:-9999px; 
+	top:-9999px; 
+	width:auto;}
+
+/* show path followed */
+#nav li:hover > a {
+	color:#000000; 
+	background:#FFFFFF;
+	font-weight: bold;
+	border-top:1px solid #DDDDDD; 
+	border-bottom:1px solid #DDDDDD;}
+	
+#nav li li:hover > a {
+	background:#FFFFFF url(../image/menubullet2.png) 10px center no-repeat;
+	text-decoration: none; 
+	font-weight: bold;
+	border:0px;}

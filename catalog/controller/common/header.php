@@ -65,7 +65,18 @@ class ControllerCommonHeader extends Controller {
 			$this->data['logo'] = '';
 		}
 		
+		
+		/* Start Lautan web */
 		$this->data['text_home'] = $this->language->get('text_home');
+		$this->data['text_about_us'] = $this->language->get('text_about_us');
+		$this->data['text_about_us'] = $this->language->get('text_about_us');
+		$this->data['text_our_product'] = $this->language->get('text_our_product');
+		$this->data['text_faq'] = $this->language->get('text_faq');
+		$this->data['text_career'] = $this->language->get('text_career');
+		$this->data['text_sitemap'] = $this->language->get('text_sitemap');
+		
+		/* End Lautan web */
+		
 		$this->data['text_wishlist'] = sprintf($this->language->get('text_wishlist'), (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0));
 		$this->data['text_shopping_cart'] = $this->language->get('text_shopping_cart');
     	$this->data['text_search'] = $this->language->get('text_search');

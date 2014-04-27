@@ -3,6 +3,13 @@ class ControllerCommonFooter extends Controller {
 	protected function index() {
 		$this->language->load('common/footer');
 		
+		/*Lautan web*/
+		$this->data['text_privacy_policy'] = $this->language->get('text_privacy_policy');
+		$this->data['text_disclaimer'] = $this->language->get('text_disclaimer');
+		$this->data['text_webmail'] = $this->language->get('text_webmail');
+		
+		/*End Lautan web*/
+		
 		$this->data['text_information'] = $this->language->get('text_information');
 		$this->data['text_service'] = $this->language->get('text_service');
 		$this->data['text_extra'] = $this->language->get('text_extra');
@@ -58,8 +65,9 @@ class ControllerCommonFooter extends Controller {
     	$this->data['fax'] = $this->config->get('config_fax');
     	
 		/*END   Add contact detail information */
+		$this->data['last_update'] = sprintf($this->language->get('text_last_update'),date('M Y', time()));
+		$this->data['powered'] = sprintf($this->language->get('text_powered'), date('Y', time()), $this->config->get('config_name'));
 		
-		$this->data['powered'] = sprintf($this->language->get('text_powered'), $this->config->get('config_name'), date('Y', time()));
 		$this->children = array(
 			'module/language',
 			'module/currency'
