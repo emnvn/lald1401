@@ -1,4 +1,13 @@
 <link rel="stylesheet" media="all" type="text/css" href="catalog/view/theme/lautan/stylesheet/sidebarmenu.css" />
+
+
+<div class="ver-menu">
+<?php foreach($menu_items as $item ){?>
+	<div <?php if($item["active"]==true||$item["last"]==true) {echo "class='";if($item["active"]==true)echo "active ";if($item["last"]==true)echo "last"; echo "'";}?>><a href="<?php echo $item["link"]?>"><?php echo $item["text"] ?></a></div>
+<?php }?>
+</div>
+
+<!-- 
 <div class="ver-menu">
 	<div class="active"><a href="#">overview</a></div>
 	<div><a href="#">business line</a></div>
@@ -7,6 +16,7 @@
 	<div><a href="#">factory</a></div>
 	<div class="last"><a href="#">contact us</a></div>
 </div>
+ -->
 <!-- 
 <ul class="ver-menu">
 	<li class="active"><a href="#">overview</a></li>

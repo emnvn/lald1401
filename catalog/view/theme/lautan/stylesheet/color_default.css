@@ -59,6 +59,25 @@ width:278px;
 .ver-menu div.last{
 	border-bottom-width:0px !important;
 }
+
+.tab-content-information{
+	padding-top:350px;
+}
+
+.htabs a {
+	background:url(../image/tab-content-left.png) no-repeat left; padding-right:0; display:inline-block; height:52px; color:#fff; font-size:14px; font-family:Tahoma; text-decoration:none;
+}
+.htabs a span{background:url(../image/tab-content-right.png) no-repeat top right; padding:0 15px 0 15px; height:69px; line-height:69px; display:inline-block}
+.htabs a span b{
+	font-weight:1000;
+	background:url(../image/tab-content-middle.png) repeat-x top; height:69px;line-height:69px; display:inline-block;}
+
+.htabs a.selected {
+	background:url(../image/tab-content-left-active.png) no-repeat left; padding-left:5px; padding-right:0; display:inline-block; height:69px; color:#013971; font-size:14px; font-family:Tahoma; text-decoration:none
+}
+.htabs a.selected span{background:url(../image/tab-content-right-active.png) no-repeat right; padding:0 20px 0 15px; height:69px; line-height:69px; display:inline-block}
+.htabs a.selected span b{background:url(../image/tab-content-middle-active.png) repeat-x bottom; height:69px; display:inline-block;}
+
 div.contact-info{
 	color:white;
 	font-size:18px;

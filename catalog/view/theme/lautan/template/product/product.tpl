@@ -220,7 +220,7 @@
 <?php } ?> <?php if ($review_status) { ?> <a href="#tab-review"><span><b><?php echo $tab_review; ?></b></span></a>
 <?php } ?> <?php if ($products) { ?> <a href="#tab-related"><span><b><?php echo $tab_related; ?>
 (<?php echo count($products); ?>)</b></span></a> <?php } ?></div>
-<div id="tab-description" class="tab-content"><?php echo $description; ?></div>
+<div id="tab-description" class="tab-content-"><?php echo $description; ?></div>
 <?php if ($attribute_groups) { ?>
 <div id="tab-attribute" class="tab-content">
 <table class="attribute">

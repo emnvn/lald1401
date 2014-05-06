@@ -18,8 +18,40 @@ class ControllerModuleSidebarMenu extends Controller {
 		}
 		
 		$this->data['category'] = $this->getCategories(0);
-						
+
+		if (isset($this->request->get['route'])) {
+			$route = (string)$this->request->get['route'];
+		} else {
+			$route = 'common/home';
+		}
 		
+		$items = array();
+		$active = false;
+		if($route == "company/overview") $active = true;
+		
+		$items[] = array("link" => $this->url->link('company/overview', '', 'SSL'),"text" => $this->language->get('text_overview'),"active"=>$active,"last"=>false);
+		
+		$active = false;
+		if($route == "company/business") $active = true;
+		$items[] = array("link" => $this->url->link('company/business', '', 'SSL'),"text" => $this->language->get('text_business'),"active"=>$active,"last"=>false);
+		
+		$active = false;
+		if($route == "company/production") $active = true;
+		$items[] = array("link" => $this->url->link('company/production', '', 'SSL'),"text" => $this->language->get('text_production'),"active"=>$active,"last"=>false);
+		
+		$active = false;
+		if($route == "company/distribution") $active = true;
+		$items[] = array("link" => $this->url->link('company/distribution', '', 'SSL'),"text" => $this->language->get('text_distribution'),"active"=>$active,"last"=>false);
+		
+		$active = false;
+		if($route == "company/factory") $active = true;
+		$items[] = array("link" => $this->url->link('company/factory', '', 'SSL'),"text" => $this->language->get('text_factory'),"active"=>$active,"last"=>false);
+		
+		$active = false;
+		if($route == "company/contact") $active = true;
+		$items[] = array("link" => $this->url->link('company/contact', '', 'SSL'),"text" => $this->language->get('text_contact'),"active"=>$active,"last"=>true);
+		
+		$this->data['menu_items'] = $items;
 		//important
 		$this->id = 'sidebarmenu';
 

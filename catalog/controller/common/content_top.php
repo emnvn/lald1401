@@ -43,10 +43,12 @@ class ControllerCommonContentTop extends Controller {
 		$extensions = $this->model_setting_extension->getExtensions('module');		
 		
 		foreach ($extensions as $extension) {
+			
 			$modules = $this->config->get($extension['code'] . '_module');
 			
 			if ($modules) {
 				foreach ($modules as $module) {
+					
 					if ($module['layout_id'] == $layout_id && $module['position'] == 'content_top' && $module['status']) {
 						$module_data[] = array(
 							'code'       => $extension['code'],
@@ -57,7 +59,7 @@ class ControllerCommonContentTop extends Controller {
 				}
 			}
 		}
-		
+		//var_dump($module_data);
 		$sort_order = array(); 
 	  
 		foreach ($module_data as $key => $value) {
@@ -72,6 +74,7 @@ class ControllerCommonContentTop extends Controller {
 			$module = $this->getChild('module/' . $module['code'], $module['setting']);
 			
 			if ($module) {
+				//var_dump($module);
 				$this->data['modules'][] = $module;
 			}
 		}

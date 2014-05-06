@@ -110,6 +110,44 @@ class ControllerCatalogInformation extends Controller {
 		$this->getList();
 	}
 
+	public function autocomplete() {
+		$json = array();
+		
+		if (isset($this->request->get['filter_name'])) {
+			$this->load->model('catalog/information');
+			
+			if (isset($this->request->get['filter_name'])) {
+				$filter_name = $this->request->get['filter_name'];
+			} else {
+				$filter_name = '';
+			}
+			
+			if (isset($this->request->get['limit'])) {
+				$limit = $this->request->get['limit'];	
+			} else {
+				$limit = 20;	
+			}			
+						
+			$data = array(
+				'filter_name'         => $filter_name,
+				'start'               => 0,
+				'limit'               => $limit
+			);
+			
+			$results = $this->model_catalog_information->getInformations($data);
+			
+			foreach ($results as $result) {
+				$option_data = array();	
+				$json[] = array(
+						'information_id' => $result['information_id'],
+						'title'       => strip_tags(html_entity_decode($result['title'], ENT_QUOTES, 'UTF-8'))
+					);
+			}
+		}
+
+		$this->response->setOutput(json_encode($json));
+	}
+	
 	private function getList() {
 		if (isset($this->request->get['sort'])) {
 			$sort = $this->request->get['sort'];
