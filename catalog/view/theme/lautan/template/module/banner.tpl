@@ -1,7 +1,7 @@
-<div  class="banner-home<?php echo $module?>">
+<div>
   <?php foreach ($banners as $banner) { ?>
   <?php if ($banner['link']) { ?>
-  <div><a href="<?php echo $banner['link']; ?>"><img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>" title="<?php echo $banner['title']; ?>" /></a></div>
+  <div style="float:left"><a href="<?php echo $banner['link']; ?>"><img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>" title="<?php echo $banner['title']; ?>" /></a></div>
   <?php } else { ?>
   <div><img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>" title="<?php echo $banner['title']; ?>" /></div>
   <?php } ?>
@@ -20,5 +20,5 @@ var banner = function() {
 	});
 }
 
-setTimeout(banner, 2000);
+//setTimeout(banner, 2000);
 //--></script>

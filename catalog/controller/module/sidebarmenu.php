@@ -48,7 +48,7 @@ class ControllerModuleSidebarMenu extends Controller {
 		$items[] = array("link" => $this->url->link('company/factory', '', 'SSL'),"text" => $this->language->get('text_factory'),"active"=>$active,"last"=>false);
 		
 		$active = false;
-		if($route == "information/contact" || $route = "information/contact/success") $active = true;
+		if($route == "information/contact" || $route == "information/contact/success") $active = true;
 		$items[] = array("link" => $this->url->link('information/contact', '', 'SSL'),"text" => $this->language->get('text_contact'),"active"=>$active,"last"=>true);
 		
 		$this->data['menu_items'] = $items;
