@@ -77,7 +77,12 @@ width:278px;
 }
 .htabs a.selected span{background:url(../image/tab-content-right-active.png) no-repeat right; padding:0 20px 0 15px; height:69px; line-height:69px; display:inline-block}
 .htabs a.selected span b{background:url(../image/tab-content-middle-active.png) repeat-x bottom; height:69px; display:inline-block;}
-
+.lautan_button input{
+	background-color:#5b8fb9;
+	text-transform:uppercase;
+	font-weight:bold;
+	color:white;
+}
 div.contact-info{
 	color:white;
 	font-size:18px;

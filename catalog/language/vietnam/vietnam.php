@@ -52,7 +52,7 @@ $_['button_quote']          = 'Lấy giá';
 $_['button_send']          = 'Gửi';
 $_['button_try_again']          = 'Thử lại';
 $_['button_submit']           = 'Lưu';
-
+$_['button_clear']          = 'Nhập lại';
 // Error
 $_['error_upload_1']        = 'Cảnh báo: Kích thước tập tin upload vượt quá giới hạn!';
 $_['error_upload_2']        = 'Cảnh báo: Kích thước tập tin upload vượt quá giới hạn!';

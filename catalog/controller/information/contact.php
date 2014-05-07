@@ -20,13 +20,14 @@ class ControllerInformationContact extends Controller {
 	  		$mail->setFrom($this->request->post['email']);
 	  		$mail->setSender($this->request->post['name']);
 	  		$mail->setSubject(html_entity_decode(sprintf($this->language->get('email_subject'), $this->request->post['name']), ENT_QUOTES, 'UTF-8'));
-	  		$mail->setText(strip_tags(html_entity_decode($this->request->post['enquiry'], ENT_QUOTES, 'UTF-8')));
+	  		$mail->setText(strip_tags(html_entity_decode($this->request->post['subject']."\n", ENT_QUOTES, 'UTF-8')).strip_tags(html_entity_decode($this->request->post['enquiry'], ENT_QUOTES, 'UTF-8')));
       		$mail->send();
 
 	  		$this->redirect($this->url->link('information/contact/success'));
     	}
 
-      	$this->data['breadcrumbs'] = array();
+    	$this->data['breadcrumbs'] = array();
+      /*	$this->data['breadcrumbs'] = array();
 
       	$this->data['breadcrumbs'][] = array(
         	'text'      => $this->language->get('text_home'),
@@ -38,7 +39,7 @@ class ControllerInformationContact extends Controller {
         	'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('information/contact'),
         	'separator' => $this->language->get('text_separator')
-      	);	
+      	);	*/
 			
     	$this->data['heading_title'] = $this->language->get('heading_title');
 
@@ -50,6 +51,7 @@ class ControllerInformationContact extends Controller {
 
     	$this->data['entry_name'] = $this->language->get('entry_name');
     	$this->data['entry_email'] = $this->language->get('entry_email');
+    	$this->data['entry_subject'] = $this->language->get('entry_subject');
     	$this->data['entry_enquiry'] = $this->language->get('entry_enquiry');
 		$this->data['entry_captcha'] = $this->language->get('entry_captcha');
 
@@ -63,7 +65,13 @@ class ControllerInformationContact extends Controller {
 			$this->data['error_email'] = $this->error['email'];
 		} else {
 			$this->data['error_email'] = '';
-		}		
+		}	
+
+  	if (isset($this->error['subject'])) {
+			$this->data['error_subject'] = $this->error['subject'];
+		} else {
+			$this->data['error_subject'] = '';
+		}
 		
 		if (isset($this->error['enquiry'])) {
 			$this->data['error_enquiry'] = $this->error['enquiry'];
@@ -77,7 +85,8 @@ class ControllerInformationContact extends Controller {
 			$this->data['error_captcha'] = '';
 		}	
 
-    	$this->data['button_continue'] = $this->language->get('button_continue');
+    	$this->data['button_submit'] = $this->language->get('button_send');
+    	$this->data['button_clear'] = $this->language->get('button_clear');
     
 		$this->data['action'] = $this->url->link('information/contact');
 		$this->data['store'] = $this->config->get('config_name');
@@ -95,6 +104,12 @@ class ControllerInformationContact extends Controller {
 			$this->data['email'] = $this->request->post['email'];
 		} else {
 			$this->data['email'] = $this->customer->getEmail();
+		}
+		
+  	if (isset($this->request->post['subject'])) {
+			$this->data['subject'] = $this->request->post['subject'];
+		} else {
+			$this->data['subject'] = '';
 		}
 		
 		if (isset($this->request->post['enquiry'])) {
@@ -131,8 +146,8 @@ class ControllerInformationContact extends Controller {
 		$this->language->load('information/contact');
 
 		$this->document->setTitle($this->language->get('heading_title')); 
-
-      	$this->data['breadcrumbs'] = array();
+$this->data['breadcrumbs'] = array();
+      	/*
 
       	$this->data['breadcrumbs'][] = array(
         	'text'      => $this->language->get('text_home'),
@@ -144,7 +159,7 @@ class ControllerInformationContact extends Controller {
         	'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('information/contact'),
         	'separator' => $this->language->get('text_separator')
-      	);	
+      	);	*/
 		
     	$this->data['heading_title'] = $this->language->get('heading_title');
 
@@ -181,13 +196,17 @@ class ControllerInformationContact extends Controller {
       		$this->error['email'] = $this->language->get('error_email');
     	}
 
+  		if ((utf8_strlen($this->request->post['subject']) < 5)) {
+      		$this->error['subject'] = $this->language->get('error_subject');
+    	}
+    	
     	if ((utf8_strlen($this->request->post['enquiry']) < 10) || (utf8_strlen($this->request->post['enquiry']) > 3000)) {
       		$this->error['enquiry'] = $this->language->get('error_enquiry');
     	}
 
-    	if (empty($this->session->data['captcha']) || ($this->session->data['captcha'] != $this->request->post['captcha'])) {
+    	/*if (empty($this->session->data['captcha']) || ($this->session->data['captcha'] != $this->request->post['captcha'])) {
       		$this->error['captcha'] = $this->language->get('error_captcha');
-    	}
+    	}*/
 		
 		if (!$this->error) {
 	  		return true;
