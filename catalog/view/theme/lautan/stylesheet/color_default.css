@@ -83,6 +83,10 @@ width:278px;
 	font-weight:bold;
 	color:white;
 }
+
+span.image img{
+	margin-bottom:20px;
+}
 div.contact-info{
 	color:white;
 	font-size:18px;

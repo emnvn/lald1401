@@ -1,9 +1,6 @@
 <?php echo $header; ?><?php echo $column_right; ?>
 <div id="sixteen columns">
-<div class="breadcrumb"><?php foreach ($breadcrumbs as $breadcrumb) { ?>
-<?php echo $breadcrumb['separator']; ?>
-<a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
-<?php } ?></div>
+
 <?php echo $column_left; ?>
 <div id="content"><?php echo $content_top; ?>
 
@@ -220,7 +217,7 @@
 <?php } ?> <?php if ($review_status) { ?> <a href="#tab-review"><span><b><?php echo $tab_review; ?></b></span></a>
 <?php } ?> <?php if ($products) { ?> <a href="#tab-related"><span><b><?php echo $tab_related; ?>
 (<?php echo count($products); ?>)</b></span></a> <?php } ?></div>
-<div id="tab-description" class="tab-content"><?php echo $description; ?></div>
+<div id="tab-description" class="tab-content-"><?php echo $description; ?></div>
 <?php if ($attribute_groups) { ?>
 <div id="tab-attribute" class="tab-content">
 <table class="attribute">
