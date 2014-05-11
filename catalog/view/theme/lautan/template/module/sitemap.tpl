@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="catalog/view/theme/lautan/stylesheet/jquery.jOrgChart.css"/>
 <link rel="stylesheet" href="catalog/view/theme/lautan/stylesheet/custom.jOrgChart.css"/>
 <script src="catalog/view/javascript/jquery/jquery.jOrgChart.js"></script>
+<h1><?php echo $heading_title?></h1>
 <?php
 function traverse_recursive($page){
 	echo "<li>";

@@ -15,5 +15,7 @@ class ModelSettingSetting extends Model {
 
 		return $data;
 	}
+	
+	
 }
 ?>

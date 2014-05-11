@@ -4,7 +4,7 @@ $_['text_header'] = 'Header';
 $_['text_main'] = 'Main';
 $_['text_footer'] = 'Footer';
 
-$_['text_root'] = 'root';
+$_['text_root'] = '&nbsp;&nbsp;home&nbsp;&nbsp;';
 
 $_['text_overview'] = 'overview';
 $_['text_business'] = 'business line';

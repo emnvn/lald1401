@@ -2,7 +2,8 @@
 // Heading
 $_['heading_title']       = 'Information Page';
 
-// Text
+// Text$_['text_content_top']    = 'Content Top';
+$_['text_content_bottom'] = 'Content Bottom';
 $_['text_module']         = 'Modules';
 $_['text_success']        = 'Success: You have modified module Information Page!';
 $_['text_content_top']    = 'Content Top';

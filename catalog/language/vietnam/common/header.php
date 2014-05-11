@@ -2,13 +2,13 @@
 
 
 // Text
-$_['text_home']           = 'TRANG CHỦ';
-$_['text_about_us']           = 'GIỚI THIỆU';
-$_['text_our_product']           = 'SẢN PHẨM ';
-$_['text_contact_us']           = 'LIÊN HỆ';
+$_['text_home']           = 'trang chủ';
+$_['text_about_us']           = 'giới thiệu';
+$_['text_our_product']           = 'sản phẩm ';
+$_['text_contact_us']           = 'liên hệ';
 $_['text_faq']           = 'FAQ';
-$_['text_career']           = 'NGHỀ NGHIỆP';
-$_['text_sitemap']           = 'BẢN ĐỒ SITE';
+$_['text_career']           = 'nghề nghiệp';
+$_['text_sitemap']           = 'bản đồ site';
 
 
 

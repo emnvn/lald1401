@@ -87,6 +87,10 @@ width:278px;
 span.image img{
 	margin-bottom:20px;
 }
+
+#header-links a{
+	text-transform:uppercase;
+}
 div.contact-info{
 	color:white;
 	font-size:18px;

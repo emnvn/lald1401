@@ -6895,3 +6895,10 @@
 2014-05-11 5:32:18 - PHP Notice:  Undefined variable: childs in C:\ApacheWebs\opencart\wwwlal\catalog\controller\module\sitemap.php on line 90
 2014-05-11 5:37:04 - PHP Notice:  Undefined variable: childs in C:\ApacheWebs\opencart\wwwlal\catalog\controller\module\sitemap.php on line 90
 2014-05-11 5:41:34 - PHP Notice:  Undefined variable: childs in C:\ApacheWebs\opencart\wwwlal\catalog\controller\module\sitemap.php on line 91
+2014-05-11 13:42:33 - PHP Notice:  Undefined offset: 0 in C:\ApacheWebs\opencart\wwwlal\catalog\controller\module\sitemap.php on line 101
+2014-05-11 13:42:57 - PHP Notice:  Undefined offset: 0 in C:\ApacheWebs\opencart\wwwlal\catalog\controller\module\sitemap.php on line 102
+2014-05-11 13:48:29 - PHP Notice:  Uninitialized string offset: 0 in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\module\sitemap.tpl on line 8
+2014-05-11 13:48:29 - PHP Notice:  Uninitialized string offset: 0 in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\module\sitemap.tpl on line 12
+2014-05-11 13:48:29 - PHP Notice:  Uninitialized string offset: 0 in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\module\sitemap.tpl on line 35
+2014-05-11 13:48:29 - PHP Notice:  Uninitialized string offset: 0 in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\module\sitemap.tpl on line 39
+2014-05-11 14:16:52 - PHP Notice:  Undefined index: id in C:\ApacheWebs\opencart\wwwlal\catalog\controller\module\TabContent.php on line 14

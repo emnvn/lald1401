@@ -23,5 +23,5 @@ $.fn.tabs = function() {
 
 	$(this).show();
 	
-	$(this).first().click();
+	//$(this).first().next().click();
 };

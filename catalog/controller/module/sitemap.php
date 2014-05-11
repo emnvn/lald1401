@@ -55,35 +55,9 @@ class ControllerModuleSitemap extends Controller {
 	
 	protected function index() {
 	
-		/*$this->language->load('module/' . $this->_name);
-
-      	$this->data['heading_title'] = $this->language->get('heading_title');
-
-		$this->load->model('localisation/language');
-
-		$languages = $this->model_localisation_language->getLanguages();
 		
-		foreach ($languages as $language) {
-			if (isset($this->request->post[$this->_name . '_title' . $language['language_id']])) {
-				$this->data[$this->_name . '_title' . $language['language_id']] = $this->request->post[$this->_name . '_title' . $language['language_id']];
-			} else {
-				$this->data[$this->_name . '_title' . $language['language_id']] = $this->config->get($this->_name . '_title' . $language['language_id']);
-			}
-		}
-		
-		$this->load->model('catalog/' . $this->_name);
-		
-		if (isset($this->request->get['path'])) {
-			$this->path = explode('_', $this->request->get['path']);
-			
-			$this->category_id = end($this->path);
-		}
-		
-		$this->data['categories_tree'] = $this->getCategories(72);
-													
-		$this->id = 'tree_category';*/
-		
-		
+		$this->language->load('module/sitemap');
+		$this->data['heading_title'] = $this->language->get('heading_title');
 		$this->language->load('module/sidebarmenu');
 		$pages = array();
 		
@@ -91,8 +65,31 @@ class ControllerModuleSitemap extends Controller {
 		//$pages[] = array("link" => "","text" => $this->language->get('text_header'),"childs"=>$childs);
 		
 		$childs = array();
-		$childs[] = array("link" => $this->url->link('company/overview', '', 'SSL'),"text" => "coporations values");
-		$childs[] = array("link" => $this->url->link('company/overview', '', 'SSL'),"text" => "coporations vision");
+		
+		$this->load->model('design/layout');
+		$layout_id = $this->model_design_layout->getLayout("company/overview");
+		//echo "Layout id: $layout_id";
+		$this->load->model('setting/setting');
+		$tab_content = $this->model_setting_setting->getSetting("TabContent");
+		if(count($tab_content)>0){
+			//var_dump($tab_content);
+			$tab_content_module = $tab_content["TabContent_module"];
+			if(is_array($tab_content_module)){
+			if($tab_content_module[0]["layout_id"]==$layout_id){
+				$child_pages = trim($tab_content_module[0]["pages"],",");
+				$child_pages = explode(',',$child_pages);
+				$this->load->model('catalog/information');
+				foreach($child_pages as $information_id){
+					$information_info = $this->model_catalog_information->getInformation($information_id);
+					$childs[] = array("link" => $this->url->link('company/overview', 'id='.$information_id, 'SSL'),"text" => $information_info["title"]);
+				}
+			}
+			}
+			
+		}
+		
+		//$childs[] = array("link" => $this->url->link('company/overview', '', 'SSL'),"text" => "coporations values");
+		//$childs[] = array("link" => $this->url->link('company/overview', '', 'SSL'),"text" => "coporations vision");
 		
 		$pages[] = array("link" => $this->url->link('company/overview', '', 'SSL'),"text" => $this->language->get('text_overview'),"childs"=>$childs);
 		
@@ -110,7 +107,7 @@ class ControllerModuleSitemap extends Controller {
 		$childs = array();
 		$childs[] = array("link" => $this->url->link('company/policy', '', 'SSL'),"text" => $this->language->get('text_privacy_policy'));
 		$childs[] = array("link" => $this->url->link('company/disclaimer', '', 'SSL'),"text" => $this->language->get('text_disclaimer'));
-		$childs[] = array("link" => "#","text" => $this->language->get('text_webmail'));
+		//$childs[] = array("link" => "#","text" => $this->language->get('text_webmail'));
 		
 		
 		$pages[] = array("link" => "","text" => strtolower($this->language->get('text_other')),"childs"=>$childs);

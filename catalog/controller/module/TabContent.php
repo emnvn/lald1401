@@ -11,8 +11,23 @@ protected function index($setting) {
 			
 		$this->load->model('catalog/information'); 
 		$this->data["pages"] = array();
+		if(isset($this->request->get["id"])){
+			$active_id = $this->request->get["id"];
+			//$this->data["active_id"] = $active_id;
+		}
+		$active_index = 1;
+		$is_traced = false; 
 		foreach($informations as $information_id){
+			
 			if($information_id == "")continue;
+		//	echo "information id: $information_id ";
+			if($information_id == $active_id){
+				$is_traced = true;
+			}
+			if(!$is_traced){
+				$active_index++;
+			}
+			
 			$information_info = $this->model_catalog_information->getInformation($information_id);
 			
 			$page = array();
@@ -21,7 +36,9 @@ protected function index($setting) {
 			$page["description"] = html_entity_decode($information_info["description"]);
 			$this->data["pages"][] = $page;
 		}
-
+		if(!$is_traced) $active_index = 1;
+		$this->data["active_index"] = $active_index;
+		//echo $active_index;
 		$this->data["test"] = "Test";
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/TabContent.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/module/TabContent.tpl';

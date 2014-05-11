@@ -1,8 +1,8 @@
 <?php
 // Text
-$_['text_privacy_policy']  = '[ Privacy Policy ]';
-$_['text_disclaimer']  = '[ Disclaimer ]';
-$_['text_webmail']  = '[ WebMail ]';
+$_['text_privacy_policy']  = 'Privacy Policy';
+$_['text_disclaimer']  = 'Disclaimer';
+$_['text_webmail']  = 'Web mail';
 $_['text_last_update']  = 'Last updated: %s';
 $_['text_other']  = 'Other';
 

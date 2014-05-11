@@ -1,4 +1,4 @@
 <?php
 // Heading
-$_['heading_title'] = 'Sitemap';
+$_['heading_title'] = 'Site map';
 ?>
