@@ -75,6 +75,10 @@ class ControllerCommonHeader extends Controller {
 		$this->data['text_career'] = $this->language->get('text_career');
 		$this->data['text_sitemap'] = $this->language->get('text_sitemap');
 		
+		$this->data['link_about'] = $this->url->link('company/about');
+		$this->data['link_product'] = $this->url->link('company/production');
+		$this->data['link_career'] = $this->url->link('company/career');
+		$this->data['link_sitemap'] = $this->url->link('company/sitemap');
 		/* End Lautan web */
 		
 		$this->data['text_wishlist'] = sprintf($this->language->get('text_wishlist'), (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0));

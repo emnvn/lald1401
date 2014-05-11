@@ -67,12 +67,11 @@ DD_belatedPNG.fix('#logo img');
 	<div class="boss_header_top">
 		<div id="header-top-right">
 		<div id="header-links">
-			<a href="#"><?php echo $text_home ?></a> | 
-			<a href="#"><?php echo $text_about_us ?></a> | 
-			<a href="#"><?php echo $text_our_product ?></a> | 
-			<a href="#"><?php echo $text_faq ?></a> | 
-			<a href="#"><?php echo $text_career ?></a> | 
-			<a href="#"><?php echo $text_sitemap ?></a>
+			<a href=""><?php echo $text_home ?></a> | 
+			<a href="<?php echo $link_about ?>"><?php echo $text_about_us ?></a> | 
+			<a href="<?php echo $link_product ?>"><?php echo $text_our_product ?></a> | 
+			<a href="<?php echo $link_career ?>"><?php echo $text_career ?></a> | 
+			<a href="<?php echo $link_sitemap ?>"><?php echo $text_sitemap ?></a>
 		</div>
 		<!-- 
 			<div id="welcome">

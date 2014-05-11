@@ -1,5 +1,11 @@
 <?php
 // Heading
+$_['text_header'] = 'Header';
+$_['text_main'] = 'Main';
+$_['text_footer'] = 'Footer';
+
+$_['text_root'] = 'root';
+
 $_['text_overview'] = 'overview';
 $_['text_business'] = 'business line';
 $_['text_production'] = 'production';

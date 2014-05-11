@@ -29,7 +29,7 @@ class ControllerCompanyProduction extends Controller {
 				$product_info['image'] = $image;
 				$temp_category_products[] = $product_info;
 			}
-			if(count($category_products)>0)
+			//if(count($category_products)>0)
 			$this->data['categories'][] = array(
 				'category_id' => $category['category_id'],
 				'products' => $temp_category_products,
