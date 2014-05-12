@@ -111,6 +111,7 @@ class ControllerUserUserPermission extends Controller {
 	}
 
 	private function getList() {
+		
 		if (isset($this->request->get['sort'])) {
 			$sort = $this->request->get['sort'];
 		} else {
@@ -173,7 +174,10 @@ class ControllerUserUserPermission extends Controller {
 		
 		$results = $this->model_user_user_group->getUserGroups($data);
 
+		
+		
 		foreach ($results as $result) {
+			
 			$action = array();
 			
 			$action[] = array(
@@ -259,6 +263,7 @@ class ControllerUserUserPermission extends Controller {
  	}
 
 	private function getForm() {
+		
 		$this->data['heading_title'] = $this->language->get('heading_title');
 		
 		$this->data['text_select_all'] = $this->language->get('text_select_all');
@@ -344,6 +349,20 @@ class ControllerUserUserPermission extends Controller {
 			'common/header'
 		);
 				
+		$must_include = array(
+			'catalog/category',
+			'catalog/product',
+			'catalog/information',
+			'extension/module',
+			'setting/store',
+			'design/layout',
+			'design/banner',
+			'user/user',
+			'user/user_permission',
+			'localisation/language',
+			'tool/error_log'
+		);
+		
 		$this->data['permissions'] = array();
 		
 		$files = glob(DIR_APPLICATION . 'controller/*/*.php');
@@ -353,7 +372,7 @@ class ControllerUserUserPermission extends Controller {
 			
 			$permission = end($data) . '/' . basename($file, '.php');
 			
-			if (!in_array($permission, $ignore)) {
+			if (!in_array($permission, $ignore) && ((isset($this->request->get["edebug"])&&$this->request->get["edebug"]=="1") || in_array($permission, $must_include))) {
 				$this->data['permissions'][] = $permission;
 			}
 		}

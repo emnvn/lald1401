@@ -182,7 +182,12 @@ class ControllerCommonHeader extends Controller {
 					'name' => $result['name'],
 					'href' => $result['url']
 				);
-			}			
+			}
+
+			$this->data['edebug'] = false;
+			if(isset($this->request->get["edebug"]) && $this->request->get["edebug"]=="1"){
+				$this->data['edebug'] = true;
+			}
 		}
 		
 		$this->template = 'common/header.tpl';

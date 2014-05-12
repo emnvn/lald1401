@@ -16,15 +16,15 @@ $_['text_shipping']                = 'Shipping Address';
 $_['text_payment']                 = 'Payment Address';
 
 // Column
-$_['column_name']                  = 'Store Name';
-$_['column_url']	               = 'Store URL';
+$_['column_name']                  = 'Site name';
+$_['column_url']	               = 'URL';
 $_['column_action']                = 'Action';
 
 // Entry
 $_['entry_url']                    = 'Store URL:<br /><span class="help">Include the full URL to your store. Make sure to add \'/\' at the end. Example: http://www.yourdomain.com/path/<br /><br />Don\'t use directories to create a new store. You should always point another domain or sub domain to your hosting.</span>';
 $_['entry_ssl']                    = 'SSL URL:<br /><span class="help">SSL URL to your store. Make sure to add \'/\' at the end. Example: http://www.yourdomain.com/path/<br /><br />Don\'t use directories to create a new store. You should always point another domain or sub domain to your hosting.</span>';
-$_['entry_name']                   = 'Store Name:';
-$_['entry_owner']                  = 'Store Owner:';
+$_['entry_name']                   = 'Site Name:';
+$_['entry_owner']                  = 'Site Owner:';
 $_['entry_address']                = 'Address:';
 $_['entry_email']                  = 'E-Mail:';
 $_['entry_telephone']              = 'Telephone:';

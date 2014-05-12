@@ -11,6 +11,7 @@ protected function index($setting) {
 			
 		$this->load->model('catalog/information'); 
 		$this->data["pages"] = array();
+		$active_id = -1;
 		if(isset($this->request->get["id"])){
 			$active_id = $this->request->get["id"];
 			//$this->data["active_id"] = $active_id;

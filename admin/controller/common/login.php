@@ -17,7 +17,8 @@ class ControllerCommonLogin extends Controller {
 			if (isset($this->request->post['redirect'])) {
 				$this->redirect($this->request->post['redirect'] . '&token=' . $this->session->data['token']);
 			} else {
-				$this->redirect($this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'));
+				//$this->redirect($this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'));
+				$this->redirect($this->url->link('catalog/category', 'token=' . $this->session->data['token'], 'SSL'));
 			}
 		}
 		
@@ -77,12 +78,14 @@ class ControllerCommonLogin extends Controller {
 			if ($this->request->get) {
 				$url .= http_build_query($this->request->get);
 			}
-			
+			if($route == "common/login") $route = "catalog/category";
 			$this->data['redirect'] = $this->url->link($route, $url, 'SSL');
 		} else {
 			$this->data['redirect'] = '';	
 		}
-	
+		//if($this->data['redirect']=="common/login") $this->data['redirect'] = "catalog/category";
+	//$this->data['redirect'] = "route=catalog/category";
+	//echo $this->data['redirect'];
 		$this->data['forgotten'] = $this->url->link('common/forgotten', '', 'SSL');
 	
 		$this->template = 'common/login.tpl';

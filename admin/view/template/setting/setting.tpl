@@ -17,7 +17,24 @@
       <div class="buttons"><a onclick="$('#form').submit();" class="button"><?php echo $button_save; ?></a><a onclick="location = '<?php echo $cancel; ?>';" class="button"><?php echo $button_cancel; ?></a></div>
     </div>
     <div class="content">
-      <div id="tabs" class="htabs"><a href="#tab-general"><?php echo $tab_general; ?></a><a href="#tab-store"><?php echo $tab_store; ?></a><a href="#tab-local"><?php echo $tab_local; ?></a><a href="#tab-option"><?php echo $tab_option; ?></a><a href="#tab-image"><?php echo $tab_image; ?></a><a href="#tab-mail"><?php echo $tab_mail; ?></a><a href="#tab-fraud"><?php echo $tab_fraud; ?></a><a href="#tab-server"><?php echo $tab_server; ?></a></div>
+      <div id="tabs" class="htabs">
+      <a href="#tab-general"><?php echo $tab_general; ?></a>
+      <a href="#tab-store"><?php echo $tab_store; ?></a>
+      
+      <?php if($edebug) {?>
+      <a href="#tab-local"><?php echo $tab_local; ?></a>
+      <a href="#tab-option"><?php echo $tab_option; ?></a>
+    
+      <a href="#tab-image"><?php echo $tab_image; ?></a>
+	       <?php }?>
+      <a href="#tab-mail"><?php echo $tab_mail; ?></a>
+      <?php if($edebug) {?>
+      
+
+      <a href="#tab-fraud" ><?php echo $tab_fraud; ?></a>
+      <a href="#tab-server"><?php echo $tab_server; ?></a>
+<?php }?>		     
+      </div>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
         <div id="tab-general">
           <table class="form">
@@ -105,7 +122,8 @@
             </tr>
           </table>
         </div>
-        <div id="tab-local">
+        
+        <div id="tab-local" <?php if(!$edebug) echo 'style="display:none"'?>>
           <table class="form">
             <tr>
               <td><?php echo $entry_country; ?></td>
@@ -200,7 +218,8 @@
             </tr>
           </table>
         </div>
-        <div id="tab-option">
+     
+        <div id="tab-option"   <?php if(!$edebug) echo 'style="display:none"'?>>
           <table class="form">
             <tr>
               <td><span class="required">*</span> <?php echo $entry_catalog_limit; ?></td>
@@ -505,7 +524,8 @@
             </tr>
           </table>
         </div>
-        <div id="tab-image">
+      
+        <div id="tab-image"   <?php if(!$edebug) echo 'style="display:none"'?>>
           <table class="form">
             <tr>
               <td><?php echo $entry_logo; ?></td>
@@ -604,7 +624,9 @@
             </tr>
           </table>
         </div>
-        <div id="tab-mail">
+      
+        
+        <div id="tab-mail" >
           <table class="form">
             <tr>
               <td><?php echo $entry_mail_protocol; ?></td>
@@ -645,6 +667,8 @@
               <td><?php echo $entry_smtp_timeout; ?></td>
               <td><input type="text" name="config_smtp_timeout" value="<?php echo $config_smtp_timeout; ?>" /></td>
             </tr>
+            
+            <?php if($edebug) {?>
             <tr>
               <td><?php echo $entry_alert_mail; ?></td>
               <td><?php if ($config_alert_mail) { ?>
@@ -677,9 +701,11 @@
               <td><?php echo $entry_alert_emails; ?></td>
               <td><textarea name="config_alert_emails" cols="40" rows="5"><?php echo $config_alert_emails; ?></textarea></td>
             </tr>
+            <?php }?>
           </table>
         </div>
-        <div id="tab-fraud">
+        
+        <div id="tab-fraud"   <?php if(!$edebug) echo 'style="display:none"'?>>
           <table class="form">
             <tr>
               <td><?php echo $entry_fraud_detection; ?></td>
@@ -717,7 +743,7 @@
             </tr>            
           </table>
         </div>
-        <div id="tab-server">
+        <div id="tab-server"  <?php if(!$edebug) echo 'style="display:none"'?>>
           <table class="form">
             <tr>
               <td><?php echo $entry_use_ssl; ?></td>
@@ -810,6 +836,7 @@
             </tr>
           </table>
         </div>
+    
       </form>
     </div>
   </div>

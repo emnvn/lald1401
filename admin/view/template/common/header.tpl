@@ -64,11 +64,14 @@ $(document).ready(function(){
   <?php if ($logged) { ?>
   <div id="menu">
     <ul class="left" style="display: none;">
+    <?php if($edebug) {?>
       <li id="dashboard"><a href="<?php echo $home; ?>" class="top"><?php echo $text_dashboard; ?></a></li>
+      <?php }?>
       <li id="catalog"><a class="top"><?php echo $text_catalog; ?></a>
         <ul>
           <li><a href="<?php echo $category; ?>"><?php echo $text_category; ?></a></li>
           <li><a href="<?php echo $product; ?>"><?php echo $text_product; ?></a></li>
+          <?php if($edebug) {?>
           <li><a class="parent"><?php echo $text_attribute; ?></a>
             <ul>
               <li><a href="<?php echo $attribute; ?>"><?php echo $text_attribute; ?></a></li>
@@ -79,18 +82,22 @@ $(document).ready(function(){
           <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
           <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
           <li><a href="<?php echo $review; ?>"><?php echo $text_review; ?></a></li>
+          <?php }?>
           <li><a href="<?php echo $information; ?>"><?php echo $text_information; ?></a></li>
         </ul>
       </li>
       <li id="extension"><a class="top"><?php echo $text_extension; ?></a>
         <ul>
           <li><a href="<?php echo $module; ?>"><?php echo $text_module; ?></a></li>
+          <?php if($edebug) {?>
           <li><a href="<?php echo $shipping; ?>"><?php echo $text_shipping; ?></a></li>
           <li><a href="<?php echo $payment; ?>"><?php echo $text_payment; ?></a></li>
           <li><a href="<?php echo $total; ?>"><?php echo $text_total; ?></a></li>
           <li><a href="<?php echo $feed; ?>"><?php echo $text_feed; ?></a></li>
+          <?php }?>
         </ul>
       </li>
+      <?php if($edebug) {?>
       <li id="sale"><a class="top"><?php echo $text_sale; ?></a>
         <ul>
           <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
@@ -113,6 +120,7 @@ $(document).ready(function(){
           <li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
         </ul>
       </li>
+      <?php }?>
       <li id="system"><a class="top"><?php echo $text_system; ?></a>
         <ul>
           <li><a href="<?php echo $setting; ?>"><?php echo $text_setting; ?></a></li>
@@ -131,6 +139,7 @@ $(document).ready(function(){
           <li><a class="parent"><?php echo $text_localisation; ?></a>
             <ul>
               <li><a href="<?php echo $language; ?>"><?php echo $text_language; ?></a></li>
+              <?php if($edebug) {?>
               <li><a href="<?php echo $currency; ?>"><?php echo $text_currency; ?></a></li>
               <li><a href="<?php echo $stock_status; ?>"><?php echo $text_stock_status; ?></a></li>
               <li><a href="<?php echo $order_status; ?>"><?php echo $text_order_status; ?></a></li>
@@ -152,12 +161,16 @@ $(document).ready(function(){
               </li>
               <li><a href="<?php echo $length_class; ?>"><?php echo $text_length_class; ?></a></li>
               <li><a href="<?php echo $weight_class; ?>"><?php echo $text_weight_class; ?></a></li>
+              <?php }?>
             </ul>
           </li>
           <li><a href="<?php echo $error_log; ?>"><?php echo $text_error_log; ?></a></li>
+          <?php if($edebug) {?>
           <li><a href="<?php echo $backup; ?>"><?php echo $text_backup; ?></a></li>
+          <?php }?>
         </ul>
       </li>
+      <?php if($edebug) {?>
       <li id="reports"><a class="top"><?php echo $text_reports; ?></a>
         <ul>
           <li><a class="parent"><?php echo $text_sale; ?></a>
@@ -196,6 +209,7 @@ $(document).ready(function(){
           <li><a onClick="window.open('http://forum.opencart.com');"><?php echo $text_support; ?></a></li>
         </ul>
       </li>
+      <?php }?>
     </ul>
     <ul class="right">
       <li id="store"><a onClick="window.open('<?php echo $store; ?>');" class="top"><?php echo $text_front; ?></a>

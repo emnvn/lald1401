@@ -14,7 +14,21 @@
       <div class="buttons"><a onclick="$('#form').submit();" class="button"><?php echo $button_save; ?></a><a onclick="location = '<?php echo $cancel; ?>';" class="button"><?php echo $button_cancel; ?></a></div>
     </div>
     <div class="content">
-      <div id="tabs" class="htabs"><a href="#tab-general"><?php echo $tab_general; ?></a><a href="#tab-data"><?php echo $tab_data; ?></a><a href="#tab-links"><?php echo $tab_links; ?></a><a href="#tab-attribute"><?php echo $tab_attribute; ?></a><a href="#tab-option"><?php echo $tab_option; ?></a><a href="#tab-discount"><?php echo $tab_discount; ?></a><a href="#tab-special"><?php echo $tab_special; ?></a><a href="#tab-image"><?php echo $tab_image; ?></a><a href="#tab-reward"><?php echo $tab_reward; ?></a><a href="#tab-design"><?php echo $tab_design; ?></a></div>
+      <div id="tabs" class="htabs">
+      
+      <a href="#tab-general"><?php echo $tab_general; ?></a>
+      <a href="#tab-data"><?php echo $tab_data; ?></a>
+      <a href="#tab-links"><?php echo $tab_links; ?></a>
+      <?php if($edebug) {?>
+      <a href="#tab-attribute"><?php echo $tab_attribute; ?></a>
+      <a href="#tab-option"><?php echo $tab_option; ?></a>
+      <a href="#tab-discount"><?php echo $tab_discount; ?></a>
+      <a href="#tab-special"><?php echo $tab_special; ?></a>
+      <a href="#tab-image"><?php echo $tab_image; ?></a>
+      <a href="#tab-reward"><?php echo $tab_reward; ?></a>
+      <a href="#tab-design"><?php echo $tab_design; ?></a>
+      <?php }?>
+      </div>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
         <div id="tab-general">
           <div id="languages" class="htabs">
@@ -52,6 +66,7 @@
           </div>
           <?php } ?>
         </div>
+        
         <div id="tab-data">
           <table class="form">
             <tr>
@@ -61,6 +76,9 @@
                 <span class="error"><?php echo $error_model; ?></span>
                 <?php } ?></td>
             </tr>
+            <?php if($edebug) {?>
+      
+
             <tr>
               <td><?php echo $entry_sku; ?></td>
               <td><input type="text" name="sku" value="<?php echo $sku; ?>" /></td>
@@ -73,10 +91,12 @@
               <td><?php echo $entry_location; ?></td>
               <td><input type="text" name="location" value="<?php echo $location; ?>" /></td>
             </tr>
+            <?php }?>
             <tr>
               <td><?php echo $entry_price; ?></td>
               <td><input type="text" name="price" value="<?php echo $price; ?>" /></td>
             </tr>
+            <?php if($edebug) {?>
             <tr>
               <td><?php echo $entry_tax_class; ?></td>
               <td><select name="tax_class_id">
@@ -90,14 +110,17 @@
                   <?php } ?>
                 </select></td>
             </tr>
+            <?php }?>
             <tr>
               <td><?php echo $entry_quantity; ?></td>
               <td><input type="text" name="quantity" value="<?php echo $quantity; ?>" size="2" /></td>
             </tr>
+            <?php if($edebug) {?>
             <tr>
               <td><?php echo $entry_minimum; ?></td>
               <td><input type="text" name="minimum" value="<?php echo $minimum; ?>" size="2" /></td>
             </tr>
+            
             <tr>
               <td><?php echo $entry_subtract; ?></td>
               <td><select name="subtract">
@@ -136,6 +159,7 @@
                 <?php echo $text_no; ?>
                 <?php } ?></td>
             </tr>
+            <?php }?>
             <tr>
               <td><?php echo $entry_keyword; ?></td>
               <td><input type="text" name="keyword" value="<?php echo $keyword; ?>" /></td>
@@ -150,6 +174,7 @@
               <td><?php echo $entry_date_available; ?></td>
               <td><input type="text" name="date_available" value="<?php echo $date_available; ?>" size="12" class="date" /></td>
             </tr>
+            <?php if($edebug) {?>
             <tr>
               <td><?php echo $entry_dimension; ?></td>
               <td><input type="text" name="length" value="<?php echo $length; ?>" size="4" />
@@ -184,6 +209,7 @@
                   <?php } ?>
                 </select></td>
             </tr>
+            <?php }?>
             <tr>
               <td><?php echo $entry_status; ?></td>
               <td><select name="status">
@@ -202,8 +228,10 @@
             </tr>
           </table>
         </div>
+       
         <div id="tab-links">
           <table class="form">
+          <?php if($edebug) {?>
             <tr>
               <td><?php echo $entry_manufacturer; ?></td>
               <td><select name="manufacturer_id">
@@ -217,6 +245,7 @@
                   <?php } ?>
                 </select></td>
             </tr>
+            <?php }?>
             <tr>
               <td><?php echo $entry_category; ?></td>
               <td><div class="scrollbox">
@@ -236,6 +265,7 @@
                 </div>
                 <a onclick="$(this).parent().find(':checkbox').attr('checked', true);"><?php echo $text_select_all; ?></a> / <a onclick="$(this).parent().find(':checkbox').attr('checked', false);"><?php echo $text_unselect_all; ?></a></td>
             </tr>
+            <?php if($edebug) {?>
             <tr>
               <td><?php echo $entry_store; ?></td>
               <td><div class="scrollbox">
@@ -297,8 +327,12 @@
                   <?php } ?>
                 </div></td>
             </tr>
+            <?php }?>
           </table>
         </div>
+     <?php if($edebug) {?>
+      
+
         <div id="tab-attribute">
           <table id="attribute" class="list">
             <thead>
@@ -683,6 +717,8 @@
             <?php } ?>
           </table>
         </div>
+      
+      <?php }?>
       </form>
     </div>
   </div>

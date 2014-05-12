@@ -935,7 +935,12 @@ class ControllerSettingSetting extends Controller {
 		} else {
 			$this->data['config_google_analytics'] = $this->config->get('config_google_analytics');
 		}
-						
+
+		$this->data['edebug'] = false;
+			if(isset($this->request->get["edebug"]) && $this->request->get["edebug"]=="1"){
+				$this->data['edebug'] = true;
+			}
+			
 		$this->template = 'setting/setting.tpl';
 		$this->children = array(
 			'common/header',

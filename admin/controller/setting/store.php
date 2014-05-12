@@ -103,7 +103,10 @@ class ControllerSettingStore extends Controller {
 							
 		$this->data['insert'] = $this->url->link('setting/store/insert', 'token=' . $this->session->data['token'], 'SSL');
 		$this->data['delete'] = $this->url->link('setting/store/delete', 'token=' . $this->session->data['token'], 'SSL');	
-
+	$this->data['edebug'] = false;
+			if(isset($this->request->get["edebug"]) && $this->request->get["edebug"]=="1"){
+				$this->data['edebug'] = true;
+			}
 		$this->data['stores'] = array();
 		
 		$action = array();

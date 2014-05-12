@@ -1162,6 +1162,11 @@ class ControllerCatalogProduct extends Controller {
 			$this->data['product_layout'] = array();
 		}
 
+  			$this->data['edebug'] = false;
+			if(isset($this->request->get["edebug"]) && $this->request->get["edebug"]=="1"){
+				$this->data['edebug'] = true;
+			}
+			
 		$this->load->model('design/layout');
 		
 		$this->data['layouts'] = $this->model_design_layout->getLayouts();
