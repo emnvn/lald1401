@@ -97,5 +97,9 @@ class ModelUserUser extends Model {
 		
 		return $query->row['total'];
 	}	
+	
+	public function addLogAction($data){
+		$this->db->query("INSERT INTO `" . DB_PREFIX . "log_action` SET username = '" . $this->db->escape($data['username']) . "', action = '" . $data['action'] . "', target_id = '" . $data['target_id'] . "', ip = '" . $data['ip'] . "', created_time = ".time());
+	}
 }
 ?>

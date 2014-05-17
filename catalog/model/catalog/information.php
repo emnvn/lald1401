@@ -20,6 +20,12 @@ class ModelCatalogInformation extends Model {
 		} else {
 			return $this->config->get('config_layout_information');
 		}
-	}	
+	}
+
+	public function getLastupdate() {
+		$query = $this->db->query("SELECT max(created_time) as last_update FROM " . DB_PREFIX . "log_action");
+
+		return $query->row;
+	}
 }
 ?>

@@ -10,7 +10,7 @@
 <?php echo $column_left; ?>
 <div id="content"><?php echo $content_top; ?>
   
-  <div class="line_right boss-padding">
+ 
   <!-- 
   
   <h1><?php echo $heading_title; ?></h1>
@@ -71,7 +71,7 @@
       </div>
     </div>
   </form>
-  </div>
+  
   
   <?php echo $content_bottom; ?></div>
   </div>

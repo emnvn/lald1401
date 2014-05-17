@@ -20,7 +20,7 @@ class ControllerCatalogProduct extends Controller {
 		$this->load->model('catalog/product');
 		
     	if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
-			$this->model_catalog_product->addProduct($this->request->post);
+			$product_id = $this->model_catalog_product->addProduct($this->request->post);
 	  		
 			$this->session->data['success'] = $this->language->get('text_success');
 	  
@@ -57,7 +57,7 @@ class ControllerCatalogProduct extends Controller {
 			if (isset($this->request->get['page'])) {
 				$url .= '&page=' . $this->request->get['page'];
 			}
-			
+			$this->addLogAction("Add product",$product_id);
 			$this->redirect($this->url->link('catalog/product', 'token=' . $this->session->data['token'] . $url, 'SSL'));
     	}
 	
@@ -109,12 +109,23 @@ class ControllerCatalogProduct extends Controller {
 			if (isset($this->request->get['page'])) {
 				$url .= '&page=' . $this->request->get['page'];
 			}
+			$this->addLogAction("Update product",$this->request->get['product_id']);
 			
 			$this->redirect($this->url->link('catalog/product', 'token=' . $this->session->data['token'] . $url, 'SSL'));
 		}
 
     	$this->getForm();
   	}
+  	
+	private function addLogAction($action,$target_id){
+		$this->load->model('user/user');
+		$data = array();
+		$data["username"] = $this->user->getUserName();
+		$data["action"] = $action;
+		$data["target_id"] = $target_id;
+		$data["ip"] = $this->request->server['REMOTE_ADDR'];
+		$this->model_user_user->addLogAction($data);
+	}
 
   	public function delete() {
     	$this->load->language('catalog/product');

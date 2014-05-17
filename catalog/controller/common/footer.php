@@ -65,7 +65,11 @@ class ControllerCommonFooter extends Controller {
     	$this->data['fax'] = $this->config->get('config_fax');
     	
 		/*END   Add contact detail information */
-		$this->data['last_update'] = sprintf($this->language->get('text_last_update'),date('M Y', time()));
+    	$lastupdate = $this->model_catalog_information->getLastupdate();
+    	$lastupdate = $lastupdate["last_update"];
+    	
+		$this->data['last_update'] = sprintf($this->language->get('text_last_update'),date('M Y', $lastupdate));
+		
 		$this->data['powered'] = sprintf($this->language->get('text_powered'), date('Y', time()), $this->config->get('config_name'));
 		
 		$this->children = array(

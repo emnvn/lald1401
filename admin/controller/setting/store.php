@@ -35,6 +35,7 @@ class ControllerSettingStore extends Controller {
   	}
 
   	public function update() {
+  		
     	$this->load->language('setting/store');
 
     	$this->document->setTitle($this->language->get('heading_title'));
@@ -44,6 +45,7 @@ class ControllerSettingStore extends Controller {
     	if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
 			$this->model_setting_store->editStore($this->request->get['store_id'], $this->request->post);
 			
+			
 			$this->load->model('setting/setting');
 			
 			$this->model_setting_setting->editSetting('config', $this->request->post, $this->request->get['store_id']);
@@ -51,10 +53,13 @@ class ControllerSettingStore extends Controller {
 			$this->session->data['success'] = $this->language->get('text_success');
 			
 			$this->redirect($this->url->link('setting/store', 'token=' . $this->session->data['token'] . '&store_id=' . $this->request->get['store_id'], 'SSL'));
+			
 		}
 
     	$this->getForm();
   	}
+  	
+	
 
   	public function delete() {
     	$this->load->language('setting/store');

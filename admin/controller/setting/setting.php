@@ -21,6 +21,7 @@ class ControllerSettingSetting extends Controller {
 			
 			$this->session->data['success'] = $this->language->get('text_success');
 
+			$this->addLogAction("Update store",0);
 			$this->redirect($this->url->link('setting/store', 'token=' . $this->session->data['token'], 'SSL'));
 		}
 
@@ -950,6 +951,16 @@ class ControllerSettingSetting extends Controller {
 		$this->response->setOutput($this->render());
 	}
 
+	private function addLogAction($action,$target_id){
+		$this->load->model('user/user');
+		$data = array();
+		$data["username"] = $this->user->getUserName();
+		$data["action"] = $action;
+		$data["target_id"] = $target_id;
+		$data["ip"] = $this->request->server['REMOTE_ADDR'];
+		$this->model_user_user->addLogAction($data);
+	}
+	
 	private function validate() {
 		if (!$this->user->hasPermission('modify', 'setting/setting')) {
 			$this->error['warning'] = $this->language->get('error_permission');
