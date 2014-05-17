@@ -4,6 +4,13 @@
 	<div <?php if($item["active"]==true||$item["last"]==true) {echo "class='";if($item["active"]==true)echo "active ";if($item["last"]==true)echo "last"; echo "'";}?>><a href="<?php echo $item["link"]?>"><?php echo $item["text"] ?></a></div>
 <?php }?>
 </div>
+<div class="select-menu">
+<select>
+<?php foreach($menu_items as $item ){?>
+	<option value="<?php echo $item['link']?>" <?php if($item["active"]==true) {echo "selected='selected'"; } ?> ><?php echo $item["text"] ?></option>
+<?php }?>
+</select>
+</div>
 
 <div class="box1" style="display:none">
   <div class="top"><img src="catalog/view/theme/default/image/menuicon.png" alt="" /><?php echo $heading_title; ?></div>

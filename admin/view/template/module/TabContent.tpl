@@ -50,7 +50,7 @@
                 <?php foreach ($module["informations"] as $informations) { ?>
                 <?php $class = ($class == 'even' ? 'odd' : 'even'); ?>
                 <div id="information-page-<?php echo $module_row; ?>-<?php echo $informations['information_id']; ?>" class="<?php echo $class; ?>"><?php echo $informations['title']; ?> <img src="view/image/delete.png" />
-                	<input type="text" value="<?php echo $informations['information_id']; ?>" />
+                	<input type="hidden" value="<?php echo $informations['information_id']; ?>" />
                 </div>
                 <script type="text/javascript">
                // attachDeleteEvent();
@@ -59,7 +59,7 @@
                 <?php } ?>
               </div>
               <input type="text" name="page-<?php echo $module_row ?>" value="" />
-              <input type="text" id="information-page-<?php echo $module_row ?>-pages" name="TabContent_module[<?php echo $module_row; ?>][pages]" value="<?php echo $module['pages']; ?>" />
+              <input type="hidden" id="information-page-<?php echo $module_row ?>-pages" name="TabContent_module[<?php echo $module_row; ?>][pages]" value="<?php echo $module['pages']; ?>" />
               </td>
               <td class="left"><select name="TabContent_module[<?php echo $module_row; ?>][layout_id]">
                   <?php foreach ($layouts as $layout) { ?>
@@ -134,7 +134,7 @@ function addModule() {
 	html += '  <tr>';
 	html += '    <td class="left"><div id="information-page-'+module_row+'" class="scrollbox"></div>';
 	html += '	 	<input type="text" name="page-'+module_row+'" value="" />';
-	html += '		<input type="text" id="information-page-'+module_row+'-pages" name="TabContent_module[' + module_row + '][pages]" value="" size="10" /></td>';
+	html += '		<input type="hidden" id="information-page-'+module_row+'-pages" name="TabContent_module[' + module_row + '][pages]" value="" size="10" /></td>';
 	html += '    <td class="left"><select name="TabContent_module[' + module_row + '][layout_id]">';
 	<?php foreach ($layouts as $layout) { ?>
 	html += '      <option value="<?php echo $layout['layout_id']; ?>"><?php echo addslashes($layout['name']); ?></option>';
@@ -183,7 +183,7 @@ function attachEvent(module_row){
 			var boxId='information-page-'+temp_id;
 			$('#'+boxId + ui.item.value).remove();
 			$('#'+boxId + '-pages').val($('#'+boxId + '-pages').val()+ui.item.value+",");
-			$('#'+boxId).append('<div id="information-page-'+temp_id+'-' + ui.item.value + '">' + ui.item.label + '<img src="view/image/delete.png" /><input type="text" value="' + ui.item.value + '" /></div>');
+			$('#'+boxId).append('<div id="information-page-'+temp_id+'-' + ui.item.value + '">' + ui.item.label + '<img src="view/image/delete.png" /><input type="hidden" value="' + ui.item.value + '" /></div>');
 			
 			$('#'+boxId+' div:odd').attr('class', 'odd');
 			$('#'+boxId+' div:even').attr('class', 'even');

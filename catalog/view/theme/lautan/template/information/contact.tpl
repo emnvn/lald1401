@@ -9,7 +9,7 @@
   -->
 <?php echo $column_left; ?>
 <div id="content"><?php echo $content_top; ?>
-  <div class="line_left">
+  
   <div class="line_right boss-padding">
   <!-- 
   
@@ -44,7 +44,7 @@
     <?php } ?>
     <br />
     <b><?php echo $entry_enquiry; ?></b><br />
-    <textarea name="enquiry" cols="40" rows="10" style="width: 99%;"><?php echo $enquiry; ?></textarea>
+    <textarea name="enquiry" cols="40" rows="10" style="width: 90%;"><?php echo $enquiry; ?></textarea>
     <br />
     <?php if ($error_enquiry) { ?>
     <span class="error"><?php echo $error_enquiry; ?></span>
@@ -72,7 +72,7 @@
     </div>
   </form>
   </div>
-  </div>
+  
   <?php echo $content_bottom; ?></div>
   </div>
 <?php echo $footer; ?>

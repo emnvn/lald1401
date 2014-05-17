@@ -42,23 +42,30 @@ p{margin-bottom:10px; line-height:16px}
 }
 #column-left {
 	float: left;
-	width: 152px;
+	width:28%;
+	/*width: 152px;
 	margin-bottom:20px;
+	background-color:red;*/
 }
+/*
 #column-right {
 	float: right;
-	width: 152px;
-	}
+	
+	
+}*/
 	
 #content {
-	min-height: 400px;
+	/*background-color:blue;*/
+	float:right;
+	width: 70%;
+	/*8min-height: 400px;*/
 	/* EMNVN comment
 	 */
 	/*padding-left:10px;*/
 	/*margin-bottom: 25px;*/
 }
 #column-left + #column-right + #content, #column-left + #content {
-	margin-left: 161px; min-height:500px;
+	/*margin-left: 161px; min-height:500px;*/
 }
 /*#column-right + #content {
 	margin-right: 195px;
@@ -564,8 +571,8 @@ span.yellow_button input.button, a.yellow_button span{background:url(../image/ye
 	height: 69px;
 	line-height: 69px;
 	
-	background:#efefef;
-	margin-left:20px
+	/*background:#efefef;
+	margin-left:20px*/
 }
 /*
 .htabs a { font-family:Tahoma; font-size:14px; text-transform:uppercase; color:#7f7a6d; font-weight:400; margin-right:11px; /*background:url(../image/line_htab.jpg) no-repeat right;*/ padding:0 12px; display:inline-block; height:36px;
@@ -2072,8 +2079,8 @@ a.colorbox b{color:#3fb0d7; font-weight:400}
 @media screen and (-webkit-min-device-pixel-ratio:0)
 { 
    
-	input[type="password"]{padding:2px 3px 1px;}
+	/*input[type="password"]{padding:2px 3px 1px;}
 	.product-list{padding-left:25px}
-	input[type="text"], input[type="password"]{line-height:25px}
+	input[type="text"], input[type="password"]{line-height:25px}*/
 	/*.product-filter .limit, .product-filter .sort{margin-top:13px}*/
 }

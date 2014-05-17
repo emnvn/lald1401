@@ -29,11 +29,12 @@ a:hover {text-decoration:underline;}
 	padding-right:5px;
 }
 
+/*
 #column-left {
 background-color:#fcf9e7;
 height:500px;
 width:278px;
-}
+}*/
 
 .ver-menu {
 	padding-left:25px;
@@ -61,11 +62,12 @@ width:278px;
 }
 
 .tab-content-information{
-	padding-top:350px;
+	margin-top:20px;
 }
 
 .htabs a {
-	background:url(../image/tab-content-left.png) no-repeat left; padding-right:0; display:inline-block; height:52px; color:#fff; font-size:14px; font-family:Tahoma; text-decoration:none;
+	background:url(../image/tab-content-left.png) no-repeat left; 
+	padding-right:0; display:inline-block; height:52px; color:#fff; font-size:14px; font-family:Tahoma; text-decoration:none;
 }
 .htabs a span{background:url(../image/tab-content-right.png) no-repeat top right; padding:0 15px 0 15px; height:69px; line-height:69px; display:inline-block}
 .htabs a span b{
@@ -77,6 +79,7 @@ width:278px;
 }
 .htabs a.selected span{background:url(../image/tab-content-right-active.png) no-repeat right; padding:0 20px 0 15px; height:69px; line-height:69px; display:inline-block}
 .htabs a.selected span b{background:url(../image/tab-content-middle-active.png) repeat-x bottom; height:69px; display:inline-block;}
+
 .lautan_button input{
 	background-color:#5b8fb9;
 	text-transform:uppercase;
@@ -91,6 +94,15 @@ span.image img{
 #header-links a{
 	text-transform:uppercase;
 }
+#org a {
+	color:black;
+}
+input[type="text"],
+textarea
+{
+	border:1px solid #c6ddee;	
+}
+
 div.contact-info{
 	color:white;
 	font-size:18px;
@@ -98,8 +110,11 @@ div.contact-info{
 	color:#999999;
 }
 
-@media only screen and (max-width: 767px) {	 
+
+@media only screen and (max-width: 767px) {
+	/*	 
 	     body{-webkit-text-size-adjust: none; font-size:14px; background:url(../image/bg_other_mobile_blue.jpg) no-repeat center 0}
 		 body.home_page{background:url(../image/bg_mobile_blue.jpg) no-repeat center 0}
 		 #header #welcome{border-bottom:1px solid #0090c3}
-		 }
+		 */
+}

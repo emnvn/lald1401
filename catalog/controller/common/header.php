@@ -181,55 +181,21 @@ class ControllerCommonHeader extends Controller {
 					);
 				}
 
-		//Bo xung load module co vi tri mainmenu
-		/*$module_data = array();
 		
-		$this->load->model('setting/extension');
-		
-		$extensions = $this->model_setting_extension->getExtensions('module');		
-		
-		foreach ($extensions as $extension) {
-			if($extension['code']!="pavbloglatest") continue;
-			$modules = $this->config->get($extension['code'] . '_module');
-		//var_dump($modules);
-			if ($modules) {
-				foreach ($modules as $module) {
-					//if ($module['layout_id'] == $layout_id && $module['position'] == 'column_left' && $module['status']) {
-					if ($module['position'] == 'mainmenu' && $module['status']) {
-						$module_data[] = array(
-							'code'       => $extension['code'],
-							'setting'    => $module,
-							'sort_order' => $module['sort_order']
-						);				
-					}
-				}
-			}
+		if (isset($this->request->get['route'])) {
+			$route = (string)$this->request->get['route'];
+		} else {
+			$route = 'common/home';
 		}
 		
-		$sort_order = array(); 
-	  
-		foreach ($module_data as $key => $value) {
-      		$sort_order[$key] = $value['sort_order'];
-    	}
+		$menu_active = "home";
+		if($route == "company/about") $menu_active = "about";
+		else if($route == "company/production") $menu_active = "product";
+		else if($route == "company/career") $menu_active = "career";
+		else if($route == "company/sitemap") $menu_active = "sitemap";
 		
-		array_multisort($sort_order, SORT_ASC, $module_data);
-		
-		$this->data['modules'] = array();
-		
-		foreach ($module_data as $module) {
-			
-			$module = $this->getChild('module/' . $module['code'], $module['setting']);
-			
-			if ($module) {
-			$this->data['modules'][] = $module;
-			}
-		}*/
-		//var_dump($this->data['modules']);
-		/*$this->children = array(
-			'module/language',
-			'module/currency',
-			'module/cart'
-		);*/
+		$this->data['menu_active'] = $menu_active;
+	//echo $menu_active;
 		$this->children = array(
 			'module/language',
 			'module/currency',

@@ -67,11 +67,22 @@ DD_belatedPNG.fix('#logo img');
 	<div class="boss_header_top">
 		<div id="header-top-right">
 		<div id="header-links">
-			<a href=""><?php echo $text_home ?></a> | 
-			<a href="<?php echo $link_about ?>"><?php echo $text_about_us ?></a> | 
-			<a href="<?php echo $link_product ?>"><?php echo $text_our_product ?></a> | 
-			<a href="<?php echo $link_career ?>"><?php echo $text_career ?></a> | 
-			<a href="<?php echo $link_sitemap ?>"><?php echo $text_sitemap ?></a>
+			<div class="hor-menu">
+				<a href=""><?php echo $text_home ?></a> | 
+				<a href="<?php echo $link_about ?>"><?php echo $text_about_us ?></a> | 
+				<a href="<?php echo $link_product ?>"><?php echo $text_our_product ?></a> | 
+				<a href="<?php echo $link_career ?>"><?php echo $text_career ?></a> | 
+				<a href="<?php echo $link_sitemap ?>"><?php echo $text_sitemap ?></a>
+			</div>
+			<div class="select-menu">
+				<select>
+					<option value="" <?php if($menu_active=="home") {echo "selected='selected'"; } ?>><?php echo $text_home; ?></option>
+					<option value="<?php echo $link_about; ?>" <?php if($menu_active=="about") {echo "selected='selected'"; } ?>><?php echo $text_about_us ?></option>
+					<option value="<?php echo $link_product; ?>" <?php if($menu_active=="product") {echo "selected='selected'"; } ?>><?php echo $text_our_product ?></option>
+					<option value="<?php echo $link_career; ?>" <?php if($menu_active=="career") {echo "selected='selected'"; } ?>><?php echo $text_career ?></option>
+					<option value="<?php echo $link_sitemap; ?>" <?php if($menu_active=="sitemap") {echo "selected='selected'"; } ?>><?php echo $text_sitemap ?></option>
+				</select>
+			</div>
 		</div>
 		
   			<div class="language_currency"><?php echo $language; ?></div>
@@ -186,4 +197,13 @@ DD_belatedPNG.fix('#logo img');
 </div>
 <?php } ?>
 <div id="notification"></div>
+<script>
+$(document).ready(function() {
+	$(".select-menu select").change(function() { 
+		window.location = $(this).find("option:selected").val();
+		//alert("menu clicked: "+$(this).find("option:selected").val()); 
+		}
+	);
+	  });
 
+</script>

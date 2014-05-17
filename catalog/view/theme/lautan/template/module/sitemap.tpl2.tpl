@@ -1,7 +1,6 @@
-<script src="catalog/view/javascript/jquery/jquery.treeview.js"></script>
-<link rel="stylesheet" href="catalog/view/theme/lautan/stylesheet/jquery.treeview.css"/>
-<link rel="stylesheet" href="catalog/view/theme/lautan/stylesheet/screen.css"/>
-
+<link rel="stylesheet" href="catalog/view/theme/lautan/stylesheet/jquery.jOrgChart.css"/>
+<link rel="stylesheet" href="catalog/view/theme/lautan/stylesheet/custom.jOrgChart.css"/>
+<script src="catalog/view/javascript/jquery/jquery.jOrgChart.js"></script>
 <h1><?php echo $heading_title?></h1>
 <?php
 function traverse_recursive($page){
@@ -24,7 +23,7 @@ function traverse_recursive($page){
    echo "</li>";
 } 
 ?>
-<ul id="org" >
+<ul id="org" style="display:none">
     <li>
     <a href=<?php echo $page_root["link"]?>> <?php echo $page_root["text"]?></a>
     <?php if(count($pages)>0){?>
@@ -51,19 +50,9 @@ function traverse_recursive($page){
     <div id="chart" class="orgChart"></div>
      <script>
     jQuery(document).ready(function() {
-    	$("#org").treeview({
-    		persist: "location",
-    		animated: "fast",
-    		collapsed: false,
-    		unique: false,
-    		toggle: function() {
-    			
-    		}
-    	});
-    	//alert("okie");
-        /*$("#org").jOrgChart({
+        $("#org").jOrgChart({
             chartElement : '#chart',
             dragAndDrop  : false
-        });*/
+        });
     });
     </script>
