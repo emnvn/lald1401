@@ -4,7 +4,7 @@
 <?php echo $column_left; ?>
 <div id="content"><?php echo $content_top; ?>
 
-<div >
+<div class="welcome">
 <b><?php echo $parent_category_name; ?></b>
  </div>
  <?php foreach($categories as $category) {?>

@@ -103,6 +103,81 @@ textarea
 	border:1px solid #c6ddee;	
 }
 
+.welcome{
+	font-weight:bold;
+	padding-bottom:20px;
+	font-size:14px;
+}
+
+
+.lautan-news-disc{
+	list-style-type:disc;
+	margin-left:50px;
+}
+
+.upper_left {
+	width: 100%; height: 100%;
+	background-image: url("../image/top-left.png");
+	background-repeat: no-repeat;
+	/*border-top:3px solid blue !important;*/
+}
+
+td.border_top{
+	background-image: url("../image/border-top.png");
+	background-repeat: repeat-x;	
+}
+
+td.border_bottom{
+	background-image: url("../image/border-bottom.png");
+	background-repeat: repeat-x;
+	background-position:bottom;
+}
+
+.upper_left div.border_content_left{
+	
+
+}
+
+.border_left{
+	width:30px;
+	background-image: url("../image/border-left.png");
+	background-repeat: repeat-y;
+	background-position:top left;
+	
+}
+
+.border_right{
+	width:30px;
+	height:100%;
+	background-image: url("../image/border-right.png");
+	background-repeat: repeat-y;
+	background-position:top right;
+	
+}
+
+.upper_right {
+	width: 100%; height: 100%;
+	
+	background-image: url("../image/top-right.png");
+	background-repeat: no-repeat;
+	background-position:top right;
+	
+}
+
+.lower_left {
+	width: 100%; height: 100%;
+	background-image: url("../image/bottom-left.png");
+	background-repeat: no-repeat;
+	background-position:bottom left;
+}
+
+.lower_right {
+	width: 100%; height: 100%;
+	background-image: url("../image/bottom-right.png");
+	background-repeat: no-repeat;
+	background-position:bottom right;
+}
+
 div.contact-info{
 	color:white;
 	font-size:18px;
