@@ -2,8 +2,8 @@
 <div id="body">
 <table border=0 height="100%"> 
 <tr>
-<td width="28%" valign="top" class="column-left"><?php echo $column_left; ?></td>
-<td valign="top"><div id="content"><?php echo $content_top; ?>
+<td class="column-left"><?php echo $column_left; ?></td>
+<td class="column-right"><div id="content"><?php echo $content_top; ?>
 
 <div >
 <b><?php echo $parent_category_name; ?></b>

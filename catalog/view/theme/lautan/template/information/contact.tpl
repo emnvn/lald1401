@@ -1,5 +1,5 @@
 <?php echo $header; ?><?php echo $column_right; ?>
-<div id="sixteen columns">
+<div id="body">
 <!-- 
 <div class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>

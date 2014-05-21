@@ -37,10 +37,10 @@ class ControllerCompanyBusiness extends Controller {
 			);	
 		}
 		
-		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/company/business_line.tpl')) {
-			$this->template = $this->config->get('config_template') . '/template/company/business_line.tpl';
+	if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/company/default.tpl')) {
+			$this->template = $this->config->get('config_template') . '/template/company/default.tpl';
 		} else {
-			$this->template = 'default/template/company/business_line.tpl';
+			$this->template = 'default/template/company/default.tpl';
 		}
 		
 		$this->children = array(

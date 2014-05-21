@@ -1,12 +1,15 @@
 *{margin:0px;padding:0px;outline:0;}
 ul,ol{list-style-type:none;}
+html,
 body {
     color: #7f7a6d;
     font-family:Arial,Helvetica,sans-serif;
     font-size: 12px;
     text-align: center;
-	
+	margin:0;
+	padding:0;
 }
+
 body div.viewport{
 	/*background:url(../image/socialFooterBg.jpg) no-repeat; 
 	background-position:bottom;
@@ -41,18 +44,16 @@ p{margin-bottom:10px; line-height:16px}
 	
 }
 #column-left {
-	float: left;
-	width:28%;
+	
+	
 	/*width: 152px;
 	margin-bottom:20px;
 	background-color:red;*/
 }
-/*
+
 #column-right {
-	float: right;
 	
-	
-}*/
+}
 	
 #content {
 	/*background-color:blue;*/

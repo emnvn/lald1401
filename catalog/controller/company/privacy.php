@@ -6,10 +6,10 @@ class ControllerCompanyPrivacy extends Controller {
 
 		$this->data['heading_title'] = $this->config->get('config_title');
 		
-		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/home.tpl')) {
-			$this->template = $this->config->get('config_template') . '/template/common/home.tpl';
+	if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/company/default.tpl')) {
+			$this->template = $this->config->get('config_template') . '/template/company/default.tpl';
 		} else {
-			$this->template = 'default/template/common/home.tpl';
+			$this->template = 'default/template/company/default.tpl';
 		}
 		
 		$this->children = array(
