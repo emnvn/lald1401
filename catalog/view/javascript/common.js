@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	 
+	 
 	/* Search */
 	$('.button-search').bind('click', function() {
 		url = $('base').attr('href') + 'index.php?route=product/search';

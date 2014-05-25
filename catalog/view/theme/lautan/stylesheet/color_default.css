@@ -2,25 +2,26 @@
 	background-color:#0f8b92;
 	color:white;
 }
+#logo{
+	/*width:28.4375%;*/
+	width:28.4375%;
+	height:213px;
+	/*background:transparent url(../image/lautanlogo.png) no-repeat center 0;*/
+	
+}
+#header-top-static{
+	background:transparent url(../image/banner.jpg) no-repeat center 0;
+	height:213px;
+	/*width:687px;
+	width:72.5625%;*/
+	width:71.5625%;
+	 margin-left:0 !important;
+}
+
 .language_currency{width:auto; float:right; margin-top:-4px}
 #container {
    min-height:100%;
    position:relative;
-}
-#header {
-   
-}
-#body {
-  min-height:100%;
-   padding-bottom:20px;   /* Height of the footer */
-  
-}
-#footer {
-   position:absolute;
-   bottom:0;
-   width:100%;
-   height:20px;   /* Height of the footer */
-   background:#6cf;
 }
 
 #header-links { float:left; color:#fff; margin-top:9px; font-size:11px;margin-left:10px;}
@@ -28,15 +29,19 @@ a, a:visited,a {color: white; outline: medium none; text-decoration: none; curso
 a:hover {text-decoration:underline;}
  
 .boss_header_bottom{
-	background: url(../image/banner.jpg) no-repeat center 0;
-	height:190px;
+	/*background: url(../image/banner.jpg) no-repeat center 0;*/
+	height:213px;
 }
 #content { padding-bottom: 3em; 
 
 color:white;
 float:right;
 }
-#footer{
+#footer{	
+   bottom:0;
+   width:100%;
+   height:20px;   /* Height of the footer */
+   background:#6cf;
 	background-color:#0f8b92;
 	color:white;
 	padding:5px 0 5px 0;
@@ -47,46 +52,33 @@ float:right;
 	float:right;
 	padding-right:5px;
 }
-.td-column-left{
+
+
+#column-left {
 	background-color:#fcf9e7;
-	width:28%;
-	vertical-align:top; 
+	
+	width:21%;
+	float:left;
 }
 
-.td-column-right{
-	padding-left:10px;
-	vertical-align:top; 
-}
-
-/*
-#column-left {
-background-color:#fcf9e7;
-height:500px;
-width:278px;
-}*/
-#column-left {
-background-color:#fcf9e7;
-min-height:100%;
-width:28%;
-float:left;
-}
 #content{
 	color:black;
+ 	width: 77%;
 }
 .ver-menu {
-	padding-left:25px;
-	background:transparent url(../image/ver-bg.png) repeat-y;	
+	padding-left:20px;
+	background:transparent url(../image/ver-bg.png) repeat-y;
+	
 }
 
 .ver-menu div{
 	background-image:url(../image/bullet-lautan.png);
 	background-repeat: no-repeat;
-
-	width:80%;
+	width:70%;
 	background-position:left; 
-	padding-top:18px;
+	padding-top:12px;
 	padding-left:25px;
-	padding-bottom:15px;
+	padding-bottom:12px;
 	border-bottom:thin solid white;
 	border-bottom-width:3px !important;
 }
@@ -103,8 +95,11 @@ float:left;
 }
 
 .htabs a {
-	background:url(../image/tab-content-left.png) no-repeat left; 
+	
+	background:url(../image/tab-content-left.png) no-repeat top left;
+	
 	padding-right:0; display:inline-block; height:52px; color:#fff; font-size:14px; font-family:Tahoma; text-decoration:none;
+	height:52px;
 }
 .htabs a span{background:url(../image/tab-content-right.png) no-repeat top right; padding:0 15px 0 15px; height:69px; line-height:69px; display:inline-block}
 .htabs a span b{

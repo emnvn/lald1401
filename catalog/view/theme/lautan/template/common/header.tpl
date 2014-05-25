@@ -2,7 +2,9 @@
 <head>
 <meta charset="UTF-8" />
 <title><?php echo $title; ?></title>
+<!-- 
 <base href="<?php echo $base; ?>" />
+-->
 <?php if ($description) { ?>
 <meta name="description" content="<?php echo $description; ?>" />
 <?php } ?>
@@ -30,6 +32,7 @@
 <?php foreach ($styles as $style) { ?>
 <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
+
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
 <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" />
@@ -38,34 +41,126 @@
 <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/colorbox/colorbox.css" media="screen" />
 <script type="text/javascript" src="catalog/view/javascript/jquery/tabs.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/common.js"></script>
-<script type="text/javascript" src="catalog/view/javascript/moderntheme/getwidthbrowser.js"></script>
-<script type="text/javascript" src="catalog/view/javascript/moderntheme/bossthemes.js"></script>
-<script type="text/javascript" src="catalog/view/javascript/moderntheme/notify.js"></script>
-<script type="text/javascript" src="catalog/view/javascript/moderntheme/jquery.easing.js"></script>
-<script type="text/javascript" src="catalog/view/javascript/moderntheme/jquery.flexslider.js"></script>
-<script type="text/javascript" src="catalog/view/javascript/moderntheme/jquery.elastislide.js"></script>
 <?php foreach ($scripts as $script) { ?>
 <script type="text/javascript" src="<?php echo $script; ?>"></script>
 <?php } ?>
-<!--[if IE 7]>
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/ie7.css" />
-<![endif]-->
-<!--[if lt IE 7]>
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/ie6.css" />
-<script type="text/javascript" src="catalog/view/javascript/DD_belatedPNG_0.0.8a-min.js"></script>
-<script type="text/javascript">
-DD_belatedPNG.fix('#logo img');
-</script>
-<![endif]-->
+<script>
+function redraw_screen(){
+	var le = $( "#column-left" );
+	var ce = $( "#content" );
+	var sh = $( window ).height();
+	var fe = $( "#footer" );
+	 var fy = fe.offset().top;
+	// var fx = fe.offset().left;
+	 var fh = fe.height();
+	 var otherHeight = 11;
+	//var ly = le.offset().top;
+	 //$("#notification").html("LEFT TOP: "+le.offset().top+" Content top: "+ce.offset().top);
+	 //Broswer binh thuong
+	 if(le.offset().top==ce.offset().top){
+		 if(sh > fy + fh){	
+			le.height(sh-le.offset().top-fh-otherHeight);
+		 }
+		 else if(sh < fy+fh){
+			 le.height(fy-le.offset().top-otherHeight);
+		 }
+		 if(le.height()<ce.height()) 
+		 {
+			le.height(ce.height());
+		 }
+	 }
+	 //responsive browser
+	 else {
+		 otherHeight = 50;
+		 	if(sh > fy + fh){	
+		 		//$("#notification").html("TH1: "+le.offset().top+" Content top: "+ce.offset().top);
+				ce.height(sh-ce.offset().top-fh-otherHeight);
+			 }
+			 
+			 
+	}
+	 
+  }
+
+function redraw_screen1(){
+	var le = $( "#column-left" );
+	var ce = $( "#content" );
+//	le.height(ce.height());
+	var sh = $( window ).height();
+	var fe = $( "#footer" );
+	 var fy = fe.offset().top;
+	// var fx = fe.offset().left;
+	 var fh = fe.height();
+	 
+	//var ly = le.offset().top;
+	 $("#notification").html("LEFT TOP: "+le.offset().top+" Content top: "+ce.offset().top);
+	// var cy = $( "#content" ).offset().top;
+	 //TH1 Neu screen height > vi tri cua footer + chieu cao cua footer
+	 if(sh > fy + fh){
+		//fe.offset({ top: sh - fh, left: fx})
+		//$("#notification").html("TH1 sh: "+sh+" fy: "+fy+" fh: "+fh+" le top: "+le.offset().top+" le height: "+le.height());
+		//fe.offset({ top: sh - fh})
+		//alert(fe.offset().top-le.offset().top);
+		//le.height(fe.offset().top-le.offset().top);	
+		//le.height(sh-le.offset().top-fh);	
+		le.height(sh-le.offset().top-fh);
+		//$("#status2").html(" le height: "+le.height()+" le top: "+le.offset().top);
+	 }
+	 else if(sh < fy+fh){
+		//le.height(sh-le.offset().top-fh);
+		 le.height(fy-le.offset().top);
+		//$("#notification").html("TH2 sh: "+sh+" fy: "+fy+" fh: "+fh+" le top: "+le.offset().top+" le height: "+le.height()+" ce top: "+ce.offset().top+" ce height: "+ce.height());
+		//fe.offset({ top: sh - fh})
+	 }
+
+	 if(le.height()<ce.height()) 
+	 {
+		// $("#notification").html("TH3 sh: "+sh+" fy: "+fy+" fh: "+fh+" ce height: "+ce.height()+" le height: "+le.height());
+		//alert("le height:"+le.height()+"ce height:"+ce.height());
+		le.height(ce.height());
+	//	alert("le height2:"+le.height()+"ce height:"+ce.height());
+		//alert("ce height:"+ce.height());
+	 }
+	 
+	 
+  }
+
+	  $(document).ready(function() {
+	 redraw_screen();
+	 
+	  $( window ).resize(function() {
+	  redraw_screen();
+	  });
+	
+	});
+		
+	</script>
+	
+	<!--[if IE 8]>
+	<link rel="stylesheet" type="text/css" href="catalog/view/theme/lautan/stylesheet/ie8.css" />
+	<![endif]-->
+	<!--[if IE 7]>
+	<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/ie7.css" />
+	<![endif]-->
+	<!--[if lt IE 7]>
+	<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/ie6.css" />
+	<script type="text/javascript" src="catalog/view/javascript/DD_belatedPNG_0.0.8a-min.js"></script>
+	<script type="text/javascript">
+	DD_belatedPNG.fix('#logo img');
+	</script>
+	<![endif]-->
 <?php echo $google_analytics; ?>
+
 </head>
 <body class="<?php echo $page_type?>"  data-twttr-rendered="true">
+
 <div class="viewport">
 <div id="container" class="container">
 <div id="header" class="sixteen columns">
 	<div class="boss_header_top">
 		<div id="header-top-right">
 		<div id="header-links">
+		
 			<div class="hor-menu">
 				<a href=""><?php echo $text_home ?></a> | 
 				<a href="<?php echo $link_about ?>"><?php echo $text_about_us ?></a> | 
@@ -73,6 +168,7 @@ DD_belatedPNG.fix('#logo img');
 				<a href="<?php echo $link_career ?>"><?php echo $text_career ?></a> | 
 				<a href="<?php echo $link_sitemap ?>"><?php echo $text_sitemap ?></a>
 			</div>
+		
 			<div class="select-menu">
 				<select>
 					<option value="" <?php if($menu_active=="home") {echo "selected='selected'"; } ?>><?php echo $text_home; ?></option>
@@ -88,6 +184,11 @@ DD_belatedPNG.fix('#logo img');
 		</div>
 	</div>
 	<div class="boss_header_bottom">
+		  <?php if ($logo) { ?>
+		  <div id="logo"><a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></a></div>
+		  <?php } ?>
+		  <div id="header-top-static">
+		  </div>
 	<!-- 
 		<?php if ($logo) { ?>
 		  <div id="logo"><a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></a></div>
@@ -115,7 +216,7 @@ DD_belatedPNG.fix('#logo img');
 		<div id="m-welcome-link"></div>
 	</div>
   
-  <div style="height:15px"></div>
+  <div style="height:15px" id="blank"></div>
 </div>
 <?php $num_of_items = count($categories);?>
 <?php $index = 0?>
@@ -196,6 +297,7 @@ DD_belatedPNG.fix('#logo img');
 </div>
 <?php } ?>
 <div id="notification"></div>
+
 <script>
 $(document).ready(function() {
 	$(".select-menu select").change(function() { 

@@ -1,6 +1,6 @@
 <div id="tabs" class="htabs">
 <?php foreach($pages as $page){?>
-<a href="#tab-TabContent-<?php echo $page["information_id"]?>" <?php if(isset($active_id) && $page["information_id"]== $active_id) echo "class='selected'" ?>><span><b><?php echo $page["title"];?></b></span></a>
+<a class="tab-title-information" href="#tab-TabContent-<?php echo $page["information_id"]?>" <?php if(isset($active_id) && $page["information_id"]== $active_id) echo "class='selected'" ?>><span><b><?php echo $page["title"];?></b></span></a>
 <?php }?>
 </div>
 <span style="clear:both"></span>
@@ -16,7 +16,15 @@ var ele = $("#tabs a").first();
 <?php for($i = 1 ; $i < $active_index ; $i++) {?>
 ele = ele.next();
 <?php } ?>
+
 ele.click();
-//var active = $( "#tabs a" ).tabs( "option", "active",1 );
-//alert(active);
+
+$(document).ready(function() {
+	$('.tab-title-information').click(function() { // bind click event to link
+		var le = $( "#column-left" );
+		var ce = $( "#content" );
+		//ce.height(le.height());
+		redraw_screen();
+	});
+	});
 //--></script>

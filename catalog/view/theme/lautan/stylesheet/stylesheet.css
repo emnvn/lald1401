@@ -90,7 +90,7 @@ p{margin-bottom:10px; line-height:16px}
 	position: relative;
 	z-index: 99;
 }
-#header #logo { margin-top:22px; float:left}
+#header #logo {float:left}
 #language {
 }
 #language img {

@@ -5,3 +5,4 @@
   <?php } ?>
 </div>
 <?php } ?> 
+<span id="column-left-temp"></span>

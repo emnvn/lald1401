@@ -13,5 +13,7 @@
 
 </div>
 </div>
+<script type="text/javascript" src="catalog/view/javascript/respond.min.js"></script>
+
 </body>
 </html>

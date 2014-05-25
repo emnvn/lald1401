@@ -6,8 +6,8 @@ class ControllerCompanyOverview extends Controller {
 
 		$this->data['heading_title'] = $this->config->get('config_title');
 		
-	if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/company/default.tpl')) {
-			$this->template = $this->config->get('config_template') . '/template/company/default.tpl';
+	if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/company/overview.tpl')) {
+			$this->template = $this->config->get('config_template') . '/template/company/overview.tpl';
 		} else {
 			$this->template = 'default/template/company/default.tpl';
 		}

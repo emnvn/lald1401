@@ -1,11 +1,8 @@
 <?php echo $header; ?><?php echo $column_right; ?>
 <div id="body">
-<table border=0 height="100%"> 
-<tr>
-<td width="28%" valign="top" class="column-left"><?php echo $column_left; ?></td>
-<td valign="top"><div id="content"><?php echo $content_top; ?>
-
-<div >
+<?php echo $column_left; ?>
+<div id="content"><?php echo $content_top; ?>
+<div>
 <b><?php echo $parent_category_name; ?></b>
  </div>
  <?php foreach($categories as $category) {?>
@@ -26,9 +23,7 @@
  
  <?php }?>
 
-  <?php echo $content_bottom; ?></div></td>
-</tr>
-</table>
+  <?php echo $content_bottom; ?></div>
 
 
 </div>

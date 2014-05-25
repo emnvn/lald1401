@@ -1,0 +1,43 @@
+#column-left {
+	display:block;
+	
+}
+
+#content {
+	
+}
+
+#footer {
+	
+}
+
+div.select-menu{
+	display:inline-block;
+	color: blue;	
+	float:left;
+	margin-left:0px;
+	left:0;
+}
+
+div.select-menu select{
+	display:inline;
+	color: blue;	
+	width:200px;
+}
+
+
+@media only screen and (max-width:959px) {
+	#header-links{	
+		width:200px;
+	}
+	
+	#column-left-temp {
+		clear:both;
+	}
+}
+
+@media only screen and (min-width:960px) {
+	#header-links{	
+		width:500px;
+	}
+}

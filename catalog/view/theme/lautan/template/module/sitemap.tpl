@@ -1,6 +1,9 @@
 <script src="catalog/view/javascript/jquery/jquery.treeview.js"></script>
 <link rel="stylesheet" href="catalog/view/theme/lautan/stylesheet/jquery.treeview.css"/>
-<link rel="stylesheet" href="catalog/view/theme/lautan/stylesheet/screen.css"/>
+<style>
+
+
+</style>
 
 <h1><?php echo $heading_title?></h1>
 <?php

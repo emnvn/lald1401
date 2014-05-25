@@ -7231,3 +7231,63 @@
 2014-05-17 10:01:21 - PHP Warning:  date() expects parameter 2 to be long, array given in C:\ApacheWebs\opencart\wwwlal\catalog\controller\common\footer.php on line 71
 2014-05-17 10:02:02 - PHP Notice:  Undefined variable: lastupdate in C:\ApacheWebs\opencart\wwwlal\catalog\controller\common\footer.php on line 69
 2014-05-17 10:02:48 - PHP Notice:  Undefined variable: lastupdate in C:\ApacheWebs\opencart\wwwlal\catalog\controller\common\footer.php on line 69
+2014-05-21 16:20:52 - PHP Notice:  Error: Could not load template C:\ApacheWebs\opencart\wwwlal/catalog/view/theme/default/template/common/business_line.tpl! in C:\ApacheWebs\opencart\wwwlal\system\engine\controller.php on line 70
+2014-05-21 16:21:20 - PHP Notice:  Undefined variable: parent_category_name in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\business_line.tpl on line 9
+2014-05-21 16:21:20 - PHP Notice:  Undefined variable: categories in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\business_line.tpl on line 11
+2014-05-21 16:21:20 - PHP Warning:  Invalid argument supplied for foreach() in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\business_line.tpl on line 11
+2014-05-21 16:22:23 - PHP Notice:  Undefined variable: parent_category_name in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\business_line.tpl on line 9
+2014-05-21 16:22:23 - PHP Notice:  Undefined variable: categories in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\business_line.tpl on line 11
+2014-05-21 16:22:23 - PHP Warning:  Invalid argument supplied for foreach() in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\business_line.tpl on line 11
+2014-05-21 16:24:56 - PHP Notice:  Error: Could not load template C:\ApacheWebs\opencart\wwwlal/catalog/view/theme/default/template/company/default.tpl! in C:\ApacheWebs\opencart\wwwlal\system\engine\controller.php on line 70
+2014-05-21 16:25:16 - PHP Notice:  Undefined variable: parent_category_name in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 9
+2014-05-21 16:25:16 - PHP Notice:  Undefined variable: categories in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:25:16 - PHP Warning:  Invalid argument supplied for foreach() in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:26:07 - PHP Notice:  Undefined variable: parent_category_name in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 9
+2014-05-21 16:26:07 - PHP Notice:  Undefined variable: categories in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:26:07 - PHP Warning:  Invalid argument supplied for foreach() in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:27:40 - PHP Notice:  Undefined variable: parent_category_name in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 9
+2014-05-21 16:27:40 - PHP Notice:  Undefined variable: categories in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:27:40 - PHP Warning:  Invalid argument supplied for foreach() in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:28:53 - PHP Notice:  Undefined variable: parent_category_name in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 9
+2014-05-21 16:28:53 - PHP Notice:  Undefined variable: categories in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:28:53 - PHP Warning:  Invalid argument supplied for foreach() in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:29:11 - PHP Notice:  Undefined variable: parent_category_name in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 9
+2014-05-21 16:29:11 - PHP Notice:  Undefined variable: categories in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:29:11 - PHP Warning:  Invalid argument supplied for foreach() in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:29:30 - PHP Notice:  Undefined variable: parent_category_name in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 9
+2014-05-21 16:29:30 - PHP Notice:  Undefined variable: categories in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:29:30 - PHP Warning:  Invalid argument supplied for foreach() in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:30:21 - PHP Notice:  Undefined variable: parent_category_name in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 9
+2014-05-21 16:30:21 - PHP Notice:  Undefined variable: categories in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:30:21 - PHP Warning:  Invalid argument supplied for foreach() in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:30:32 - PHP Notice:  Undefined variable: parent_category_name in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 9
+2014-05-21 16:30:32 - PHP Notice:  Undefined variable: categories in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:30:32 - PHP Warning:  Invalid argument supplied for foreach() in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:30:40 - PHP Notice:  Undefined variable: parent_category_name in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 9
+2014-05-21 16:30:40 - PHP Notice:  Undefined variable: categories in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:30:40 - PHP Warning:  Invalid argument supplied for foreach() in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:30:52 - PHP Notice:  Undefined variable: parent_category_name in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 9
+2014-05-21 16:30:52 - PHP Notice:  Undefined variable: categories in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:30:52 - PHP Warning:  Invalid argument supplied for foreach() in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:34:50 - PHP Notice:  Undefined variable: parent_category_name in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 9
+2014-05-21 16:34:50 - PHP Notice:  Undefined variable: categories in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:34:50 - PHP Warning:  Invalid argument supplied for foreach() in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:34:56 - PHP Notice:  Undefined variable: parent_category_name in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 9
+2014-05-21 16:34:56 - PHP Notice:  Undefined variable: categories in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:34:56 - PHP Warning:  Invalid argument supplied for foreach() in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:35:54 - PHP Notice:  Undefined variable: parent_category_name in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 9
+2014-05-21 16:35:54 - PHP Notice:  Undefined variable: categories in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:35:54 - PHP Warning:  Invalid argument supplied for foreach() in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 11
+2014-05-21 16:44:26 - PHP Notice:  Undefined variable: heading_title in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 6
+2014-05-21 16:44:33 - PHP Notice:  Undefined variable: heading_title in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 6
+2014-05-21 16:44:55 - PHP Notice:  Undefined variable: heading_title in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 6
+2014-05-21 16:45:06 - PHP Notice:  Undefined variable: heading_title in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 6
+2014-05-21 16:45:15 - PHP Notice:  Undefined variable: heading_title in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 6
+2014-05-21 16:48:02 - PHP Notice:  Undefined variable: heading_title in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 6
+2014-05-21 17:00:23 - PHP Notice:  Undefined variable: heading_title in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 6
+2014-05-21 17:00:27 - PHP Notice:  Undefined variable: heading_title in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 6
+2014-05-21 17:04:29 - PHP Notice:  Undefined variable: heading_title in C:\ApacheWebs\opencart\wwwlal\catalog\view\theme\lautan\template\company\default.tpl on line 6
+2014-05-25 4:38:59 - PHP Notice:  Undefined variable: entry_customer_approval in C:\ApacheWebs\opencart\wwwlal\admin\view\template\setting\setting.tpl on line 319
+2014-05-25 4:38:59 - PHP Notice:  Undefined variable: config_customer_approval in C:\ApacheWebs\opencart\wwwlal\admin\view\template\setting\setting.tpl on line 320
+2014-05-25 4:39:13 - PHP Notice:  Undefined variable: entry_customer_approval in C:\ApacheWebs\opencart\wwwlal\admin\view\template\setting\setting.tpl on line 319
+2014-05-25 4:39:13 - PHP Notice:  Undefined variable: config_customer_approval in C:\ApacheWebs\opencart\wwwlal\admin\view\template\setting\setting.tpl on line 320
