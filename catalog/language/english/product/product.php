@@ -1,4 +1,6 @@
 <?php
+$_['heading_title']       = 'Production';
+$_['business_heading_title']       = 'Business line';
 // Text
 $_['text_search']       = 'Search';
 $_['text_brand']        = 'Brand';

@@ -92,7 +92,7 @@
               <td><input type="text" name="location" value="<?php echo $location; ?>" /></td>
             </tr>
             <?php }?>
-            <tr>
+            <tr style="display:none;">
               <td><?php echo $entry_price; ?></td>
               <td><input type="text" name="price" value="<?php echo $price; ?>" /></td>
             </tr>
@@ -111,7 +111,7 @@
                 </select></td>
             </tr>
             <?php }?>
-            <tr>
+            <tr style="display:none;">
               <td><?php echo $entry_quantity; ?></td>
               <td><input type="text" name="quantity" value="<?php echo $quantity; ?>" size="2" /></td>
             </tr>
@@ -275,7 +275,7 @@
                     <input type="checkbox" name="product_store[]" value="0" checked="checked" />
                     <?php echo $text_default; ?>
                     <?php } else { ?>
-                    <input type="checkbox" name="product_store[]" value="0" />
+                    <input type="checkbox" name="product_store[]" value="0" checked="checked" />
                     <?php echo $text_default; ?>
                     <?php } ?>
                   </div>
@@ -286,7 +286,7 @@
                     <input type="checkbox" name="product_store[]" value="<?php echo $store['store_id']; ?>" checked="checked" />
                     <?php echo $store['name']; ?>
                     <?php } else { ?>
-                    <input type="checkbox" name="product_store[]" value="<?php echo $store['store_id']; ?>" />
+                    <input type="checkbox" name="product_store[]" value="<?php echo $store['store_id']; ?>" checked="checked" />
                     <?php echo $store['name']; ?>
                     <?php } ?>
                   </div>
@@ -327,6 +327,11 @@
                   <?php } ?>
                 </div></td>
             </tr>
+            <?php }
+            else {?>
+            <span style="display:none">
+            <input type="checkbox" name="product_store[]" value="0" checked="checked" />
+            </span>
             <?php }?>
           </table>
         </div>

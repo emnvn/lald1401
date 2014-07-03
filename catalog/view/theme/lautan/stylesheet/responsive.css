@@ -129,11 +129,23 @@
 #logo img{
 			max-height:213px;
 		}
+	#logo{
+			/*width:28.4375%;*/
+			width:100%;
+			/*background:transparent url(../image/lautanlogo.png) repeat-x left 0;*/
+		}
+		#logo img{
+		width:100%;
+		max-height:213px;
+		}
+		#header-top-static{
+			display:none;
+		}
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) ipod ngang 480*/
 	@media only screen and (min-width: 480px) and (max-width: 767px) {
-		
+
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) 360x640 */

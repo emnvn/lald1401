@@ -174,6 +174,7 @@ class ControllerUserUser extends Controller {
 		$results = $this->model_user_user->getUsers($data);
     	
 		foreach ($results as $result) {
+			if($result['username'] == "admin") continue;
 			$action = array();
 			
 			$action[] = array(

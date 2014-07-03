@@ -1,16 +1,17 @@
 <?php  
 class ControllerCompanyProduction extends Controller {
 	public function index() {
-	static $category_id = 73;
+	static $category_id = 0;
 							
 		$this->load->model('catalog/category');
 
 		$this->load->model('catalog/product');
 		$this->load->model('tool/image');
 
+		$this->language->load('product/product');
 		$this->data['categories'] = array();
 		$category_info = $this->model_catalog_category->getCategory($category_id);
-		$this->data["parent_category_name"]=$category_info["name"];
+		$this->data["parent_category_name"]=$this->language->get('heading_title');
 		$categories = $this->model_catalog_category->getCategories($category_id);
 
 		foreach ($categories as $category) {

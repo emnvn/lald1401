@@ -61,6 +61,7 @@ $registry->set('log', $log);
 function error_handler($errno, $errstr, $errfile, $errline) {
 	global $log, $config;
 	
+	
 	switch ($errno) {
 		case E_NOTICE:
 		case E_USER_NOTICE:
@@ -92,7 +93,8 @@ function error_handler($errno, $errstr, $errfile, $errline) {
 
 // Error Handler
 set_error_handler('error_handler');
-		
+
+//error_reporting(0);
 // Request
 $request = new Request();
 $registry->set('request', $request);

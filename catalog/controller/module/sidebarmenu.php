@@ -36,7 +36,7 @@ class ControllerModuleSidebarMenu extends Controller {
 		$items[] = array("link" => $this->url->link('company/business', '', 'SSL'),"text" => $this->language->get('text_business'),"active"=>$active,"last"=>false);
 		
 		$active = false;
-		if($route == "company/production") $active = true;
+		if($route == "company/production" || $route == "company/product") $active = true;
 		$items[] = array("link" => $this->url->link('company/production', '', 'SSL'),"text" => $this->language->get('text_production'),"active"=>$active,"last"=>false);
 		
 		$active = false;
@@ -49,7 +49,7 @@ class ControllerModuleSidebarMenu extends Controller {
 		
 		$active = false;
 		if($route == "information/contact" || $route == "information/contact/success") $active = true;
-		$items[] = array("link" => $this->url->link('information/contact', '', 'SSL'),"text" => $this->language->get('text_contact'),"active"=>$active,"last"=>true);
+		$items[] = array("link" => $this->url->link('information/contact', '', 'SSL'),"text" => $this->language->get('text_contact'),"active"=>$active,"last"=>false);
 		
 		$this->data['menu_items'] = $items;
 		//important

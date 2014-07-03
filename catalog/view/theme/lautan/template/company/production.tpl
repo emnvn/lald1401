@@ -5,22 +5,23 @@
 <div id="content"><?php echo $content_top; ?>
 
 <div class="welcome">
-<b><?php echo $parent_category_name; ?></b>
+<?php echo $parent_category_name; ?>
  </div>
  <?php foreach($categories as $category) {?>
  
- <div>
+ <div style="clear:left">
   <?php echo $category["description"]?>
   </div>
   <br/>
   <?php foreach($category["products"] as $product){?>
-  <span class="image" ><a
+  <div class="image" ><a
 		href="index.php?route=company/product&product_id=<?php echo $product['product_id']?>">
 	<img title="<?php echo $product["name"]?>"
 		alt="<?php echo $product["name"]?>"
-		src="<?php echo $product['image']?>"> </a>
+		src="<?php echo $product['image']?>"> </a><br/>
+		<?php echo $product["name"]?>
 	
-	</span>
+	</div>
   <?php }?>
  
  <?php }?>

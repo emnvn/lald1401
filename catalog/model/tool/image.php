@@ -27,7 +27,7 @@ class ModelToolImage extends Model {
 			list($width_orig, $height_orig) = getimagesize(DIR_IMAGE . $old_image);
 
 			
-			if (($width!=1 && height!=1) && ($width_orig != $width || $height_orig != $height)) {
+			if (($width!=1 && $height!=1) && ($width_orig != $width || $height_orig != $height)) {
 				$image = new Image(DIR_IMAGE . $old_image);
 				$image->resize($width, $height);
 				$image->save(DIR_IMAGE . $new_image);

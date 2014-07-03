@@ -6,11 +6,11 @@ $_['text_footer'] = 'Footer';
 
 $_['text_root'] = '&nbsp;&nbsp;home&nbsp;&nbsp;';
 
-$_['text_overview'] = 'overview';
-$_['text_business'] = 'business line';
-$_['text_production'] = 'production';
-$_['text_distribution'] = 'distribution';
-$_['text_factory'] = 'factory';
-$_['text_contact'] = 'contact us';
+$_['text_overview'] = 'Overview';
+$_['text_business'] = 'Business line';
+$_['text_production'] = 'Production';
+$_['text_distribution'] = 'Distribution';
+$_['text_factory'] = 'Factory';
+$_['text_contact'] = 'Contact us';
 
 ?>

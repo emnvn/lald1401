@@ -2,6 +2,7 @@
 class ControllerCommonHeader extends Controller {
 	protected function index() {
 		$this->data['title'] = $this->document->getTitle();
+		if($this->data['title']=="")$this->data['title'] = "Lautan Luas";
 		
 		if (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1'))) {
 			$this->data['base'] = $this->config->get('config_ssl');
@@ -125,7 +126,7 @@ class ControllerCommonHeader extends Controller {
 					'name'     => $this->language->get('text_contact'),
 					'href'     => $this->url->link('information/contact')
 		);
-		foreach ($categories as $category) {
+		/*foreach ($categories as $category) {
 			
 			if ($category['top']) {
 				$children_data = array();
@@ -170,7 +171,7 @@ class ControllerCommonHeader extends Controller {
 					'href'     => $this->url->link('product/category', 'path=' . $category['category_id'])
 				);
 			}
-		}
+		}*/
 		
 	if(isset($this->data['categories'])){
 					$this->data['categories'][] = array(

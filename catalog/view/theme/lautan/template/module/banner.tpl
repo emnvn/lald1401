@@ -1,7 +1,7 @@
 <div>
   <?php foreach ($banners as $banner) { ?>
   <?php if ($banner['link']) { ?>
-  <div style="float:left"><a href="<?php echo $banner['link']; ?>"><img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>" title="<?php echo $banner['title']; ?>" /></a></div>
+  <div style="float:left;margin:10px;border:thin solid #e3e3e3;padding:5px"><a href="<?php echo $banner['link']; ?>"><img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>" title="<?php echo $banner['title']; ?>" /></a></div>
   <?php } else { ?>
   <div><img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>" title="<?php echo $banner['title']; ?>" /></div>
   <?php } ?>

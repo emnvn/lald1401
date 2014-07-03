@@ -16,6 +16,7 @@
   <h1><?php echo $heading_title; ?></h1>
   -->
   <h2><?php echo $heading_title; ?></h2><br/>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m10!1m3!1d3919.764279773579!2d106.66794010000001!3d10.752632799999999!2m1!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ef97c4d2fbf%3A0x878d5a19667970d9!2zNDE4IFRy4bqnbiBQaMO6LCBQaMaw4budbmcgNywgUXXhuq1uIDU!5e0!3m2!1sen!2s!4v1404139151478" width="600" height="400" frameborder="0" style="border:0"></iframe>
   <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
     <!-- 
     <h2><?php echo $text_contact; ?></h2>

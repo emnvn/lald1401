@@ -3,6 +3,7 @@
 <?php foreach($menu_items as $item ){?>
 	<div <?php if($item["active"]==true||$item["last"]==true) {echo "class='";if($item["active"]==true)echo "active ";if($item["last"]==true)echo "last"; echo "'";}?>><a href="<?php echo $item["link"]?>"><?php echo $item["text"] ?></a></div>
 <?php }?>
+<br/>
 </div>
 <div class="select-menu">
 <select>

@@ -68,7 +68,7 @@ float:right;
 .ver-menu {
 	padding-left:20px;
 	background:transparent url(../image/ver-bg.png) repeat-y;
-	
+	width:182px;
 }
 
 .ver-menu div{
@@ -82,10 +82,18 @@ float:right;
 	border-bottom:thin solid white;
 	border-bottom-width:3px !important;
 }
-
+.ver-menu div a{
+	font-size:13px;
+}
 .ver-menu div.active{
 	background-image:url(../image/bullet-lautan-active.png);
 }
+
+.ver-menu div.active a{
+	color:#013971;
+	font-weight:bold;
+}
+
 .ver-menu div.last{
 	border-bottom-width:0px !important;
 }
@@ -119,8 +127,27 @@ float:right;
 	color:white;
 }
 
-span.image img{
+div.image{
 	margin-bottom:20px;
+	border: 2px solid #e3e3e3;
+	padding:0px 5px 0px 5px;
+	float:left;
+	margin-right:10px;
+	text-align:center;
+}
+
+.business_line {
+	margin-top:20px;
+	margin-left:20px;
+}
+
+.business_line li{
+	list-style-type:circle;
+	line-height:2em;
+}
+
+.business_line a{
+	color:black;
 }
 
 #header-links a{
@@ -146,10 +173,16 @@ textarea
 .lautan-news-disc{
 	list-style-type:disc;
 	margin-left:50px;
+	margin-top:20px;
 }
 
 .upper_left {
-	width: 85%; height: 100%;
+	width: 85%;
+	height:auto !important;
+
+	/*height: 100%;*/
+	
+	height:auto;
 	background-image: url("../image/top-left.png");
 	background-repeat: no-repeat;
 	margin-left:20px;
@@ -192,7 +225,8 @@ td.border_bottom{
 }
 
 .upper_right {
-	width: 100%; height: 100%;
+	width: 100%; 
+	/*height: 100%;*/
 	
 	background-image: url("../image/top-right.png");
 	background-repeat: no-repeat;
@@ -201,14 +235,16 @@ td.border_bottom{
 }
 
 .lower_left {
-	width: 100%; height: 100%;
+	width: 100%; 
+	/*height: 100%;*/
 	background-image: url("../image/bottom-left.png");
 	background-repeat: no-repeat;
 	background-position:bottom left;
 }
 
 .lower_right {
-	width: 100%; height: 100%;
+	width: 100%; 
+	/*height: 100%;*/
 	background-image: url("../image/bottom-right.png");
 	background-repeat: no-repeat;
 	background-position:bottom right;

@@ -1,6 +1,7 @@
 <?php
 
-
+$_['heading_title']       = 'Sản phẩm';
+$_['business_heading_title']       = 'Ngành nghề';
 $_['products_set_sale_title']       = 'Mua theo bộ';
 // Text
 $_['text_search']       = 'Tìm kiếm';
