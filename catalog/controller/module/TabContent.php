@@ -11,7 +11,32 @@ protected function index($setting) {
 			
 		$this->load->model('catalog/information'); 
 		$this->data["pages"] = array();
+		
+		//Start get description
 		$active_id = -1;
+		if(isset($this->request->get["path"])){
+			$parts = explode('_', (string)$this->request->get['path']);
+			$category_id = (int)array_pop($parts);
+			$this->load->model('catalog/category');
+			$category_info = $this->model_catalog_category->getCategory($category_id);
+			if ($category_info) {
+				$this->data['breadcrumbs'][] = array(
+					'text'      => $category_info['name'],
+					'href'      => $this->url->link('product/category', 'path=' . $path . $url),
+					'separator' => $this->language->get('text_separator')
+				);
+				
+				$page = array();
+				$page["information_id"] = "category_".$category_id;
+				$page["title"] = $category_info['name'];
+				$page["description"] = html_entity_decode($category_info["description"]);
+				$this->data["pages"][] = $page;
+			
+			}
+			 
+		}
+		//End get description
+		
 		if(isset($this->request->get["id"])){
 			$active_id = $this->request->get["id"];
 			//$this->data["active_id"] = $active_id;
